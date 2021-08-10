@@ -49,8 +49,6 @@ export default function Detail({ project }) {
                     ))}
                 </div>
             </section>
-            
-
         </article>
     )
 }

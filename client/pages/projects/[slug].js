@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export default function Project({ data }) {
 
-    // console.log(data);
+    console.log(data);
 
     const router = useRouter(); 
     if (router.isFallback) {
