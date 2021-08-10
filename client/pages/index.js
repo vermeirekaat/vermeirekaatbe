@@ -8,7 +8,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Home({ data }) {
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className={styles.container}>
@@ -25,7 +25,7 @@ export default function Home({ data }) {
   )
 }
 
-export async function getStaticProps () {
+export async function getStaticProps() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/projects?_sort=id:desc`);
   const data = await res.json();
 

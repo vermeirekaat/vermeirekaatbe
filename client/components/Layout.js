@@ -38,8 +38,8 @@ export default function Layout({ background, projects }) {
 
             <div className={styles.overview}>
                 {overview.map((project) => (
-                    <Link key={project.id} href={`/projects/${project.title}`}>
-                    <a className={styles.project}>
+                    <Link key={project.id} href={`/projects/${project.slug}`}>
+                    <a className={styles.link}>
                     <article className={styles.project} key={project.id}>
                         <h4 className={styles.subtitle}>{project.title}</h4>
                         <div className={styles.tags}>
