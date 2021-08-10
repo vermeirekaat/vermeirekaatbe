@@ -2,7 +2,7 @@ import styles from "./Layout.module.css";
 import Image from "next/image";
 import {useState} from "react";
 
-export default function Layout({ background, projects}) {
+export default function Layout({ background, projects }) {
 
     const [showProjects, setShowProjects] = useState(false);
 
@@ -10,7 +10,7 @@ export default function Layout({ background, projects}) {
 
     if (showProjects === false) {
         overview = projects.slice(0, 4);
-        console.log("false");
+        // console.log("false");
     } else if (showProjects === true) {
         overview = projects;
     }
@@ -49,6 +49,8 @@ export default function Layout({ background, projects}) {
                             width={project.cover.width}
                             height={project.cover.height}
                             alt={project.title}
+                            priority={true}
+                            quality={50}
                         />
                     </article>
                 ))}
@@ -62,8 +64,6 @@ export default function Layout({ background, projects}) {
                     <p className={styles.end}>You've seen all projects.</p>
                 </div> 
             }
-           
-
         </section>
     )
 }
