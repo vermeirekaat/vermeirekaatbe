@@ -1,5 +1,5 @@
 @value values: "../styles/vars.module.css";
-@value primaryColor, secondaryColor, extraColor from values;
+@value breakpointOne, breakpointTwo from values;
 
 .container {
     min-height: 100vh; 
@@ -17,13 +17,21 @@
 
 .header {
     padding: 1rem;
+    max-width: 20rem;
+    margin: 0 auto;
 }
 
 .information {
     display: flex; 
-    flex-direction: row; 
+    flex-direction: column; 
+    justify-content: space-around;
+}
+
+.information_title {
+    display: flex; 
+    flex-direction: row;
     justify-content: space-between;
-    align-content: baseline;
+    align-items: center;
 }
 
 .title {
@@ -40,6 +48,8 @@
 
 .content {
     padding: 1rem;
+    max-width: 20rem;
+    margin: 0 auto;
 }
 
 .content_info {
@@ -54,4 +64,35 @@
     font-weight: bold;
     width: 14rem;
     margin: 0 auto;
+}
+
+@media screen and (min-width: breakpointOne) {
+    .header {
+        max-width: 40rem;
+    }
+
+    .information {
+        margin: 1.5rem .5rem;
+        max-width: 20rem;
+    }
+
+    .tags {
+        max-width: 10rem;
+    }
+
+    .header {
+        display: flex; 
+        flex-direction: column-reverse;
+    }
+
+    .content {
+        max-width: 40rem;
+        padding: 1.5rem;
+    }
+
+    .tools {
+        grid-template-columns: repeat(4, 7rem);
+        width: 30rem;
+    }
+    
 }

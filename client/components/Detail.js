@@ -16,20 +16,23 @@ export default function Detail({ project }) {
             </a></Link>
             <section className={styles.header}>
                 <div className={styles.information}>
-                    <h1 className={styles.title}>{project.title}</h1>
-                    <Link href={project.link}><a className={styles.link} target="_blank">
-                        <Image
-                            src="/assets/external-link.svg"
-                            alt="external-link-icon"
-                            width={50}
-                            height={50}
-                        />   
-                    </a></Link>
-                </div>
-                <div className={styles.tags}>
+                    <div className={styles.information_title}>
+                        <h1 className={styles.title}>{project.title}</h1>
+                        <Link href={project.link}><a className={styles.link} target="_blank">
+                            <Image
+                                src="/assets/external-link.svg"
+                                alt="external-link-icon"
+                                width={50}
+                                height={50}
+                            />   
+                        </a></Link>
+                    </div>
+
+                    <div className={styles.tags}>
                     {project.tags.map((tag) => (
                         <p className={styles.tag} key={tag.name}>{tag.short}</p>
                     ))}
+                    </div>
                 </div>
                 <Image
                     src={process.env.NEXT_PUBLIC_STRAPI_URL + project.banner.url}
