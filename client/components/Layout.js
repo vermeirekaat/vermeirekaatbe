@@ -39,21 +39,22 @@ export default function Layout({ background, projects }) {
                     <Link key={project.id} href={`/projects/${project.slug}`}>
                     <a className={styles.link}>
                     <article className={styles.project} key={project.id}>
-                        <h4 className={styles.subtitle}>{project.title}</h4>
+                        <div className={styles.project_container}>
+                             <h4 className={styles.subtitle}>{project.title}</h4>
                         <div className={styles.tags}>
                             {project.tags.map((tag) => (
                                 <p className={styles.tag} key={tag.name}>{tag.short}</p>
                             ))}
                         </div>
-                       
                         <Image
                             src={process.env.NEXT_PUBLIC_STRAPI_URL + project.cover.url}
-                            width={project.cover.width}
-                            height={project.cover.height}
+                            width={250}
+                            height={200}
                             alt={project.title}
                             priority={true}
                             quality={50}
                         />
+                        </div>
                     </article>
                     </a>
                     </Link>

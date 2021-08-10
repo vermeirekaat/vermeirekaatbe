@@ -1,13 +1,14 @@
 @value values: "../styles/vars.module.css";
-@value primaryColor, secondaryColor, extraColor from values;
+@value primaryColor, secondaryColor, extraColor, breakpointOne, breakpointTwo from values;
 
 .container {
-    min-width: 100vw;
     padding-top: 10vh;
 }
 
 .intro {
     padding: 2rem;
+    max-width: 40rem;
+    margin: 0 auto;
 }
 
 .title {
@@ -40,27 +41,41 @@
     color: secondaryColor;
 }
 
+.overview {
+    margin: 0 auto;
+    width: 20rem;
+}
+
 .project {
-    margin: 2.5rem;
-    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding: 2rem 0;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     border-radius: .2rem;
+    width: 20rem;
+    height: 23rem;
+}
+
+.project_container {
+    max-width: 15rem; 
+    margin: 0 auto;
 }
 
 .subtitle {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    height: 4rem;
 }
 
 .tags {
-    width: 50vw;
+    max-width: 10rem;
     display: flex; 
     justify-content: space-between;
     text-transform: uppercase;
 }
 
 .bottom {
-    margin: 2.5rem;
+    max-width: 20rem; 
+    margin: 0 auto;
 }
 
 .button {
@@ -76,4 +91,24 @@
     font-size: 1.2rem; 
     color: extraColor;
     text-align: center;
+}
+
+@media screen and (min-width: breakpointOne) {
+    .overview {
+        display: grid; 
+        grid-template-columns: repeat(2, 20rem);
+        grid-gap: .5rem;
+        margin: 0 auto;
+        width: 40.5rem;
+    }
+}
+
+@media screen and (min-width: breakpointTwo) {
+    .overview {
+        display: grid; 
+        grid-template-columns: repeat(3, 20rem);
+        grid-gap: .5rem;
+        margin: 0 auto;
+        width: 60.5rem;
+    }
 }
