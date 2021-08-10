@@ -1,8 +1,10 @@
+import Metadata from "../../components/Metadata";
+import Detail from "../../components/Detail";
 import { useRouter } from "next/router";
 
 export default function Project({ data }) {
 
-    console.log(data);
+    // console.log(data);
 
     const router = useRouter(); 
     if (router.isFallback) {
@@ -10,7 +12,11 @@ export default function Project({ data }) {
     }
 
     return (
-        <p>{data.title}</p>
+        <article>
+            <Metadata title={data.title}></Metadata>
+
+            <Detail project={data}></Detail>
+        </article>
     )
 }
 

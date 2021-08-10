@@ -12,7 +12,7 @@ export default function Home({ data }) {
 
   return (
     <div className={styles.container}>
-      <Metadata></Metadata>
+      <Metadata title="©vermeirekaat"></Metadata>
 
       <Header background="black"></Header>
 
