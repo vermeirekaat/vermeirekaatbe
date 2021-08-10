@@ -21,10 +21,10 @@ export default function Project({ data }) {
 }
 
 export async function getStaticProps({ params }) {
-    const r = await fetch(
+    const res = await fetch(
       `${process.env.NEXT_PUBLIC_STRAPI_URL}/projects/?slug=${params.slug}`
     );
-    const data = await r.json();
+    const data = await res.json();
   
     return {
       props: {
@@ -35,10 +35,10 @@ export async function getStaticProps({ params }) {
   };
   
   export async function getStaticPaths() {
-    const r = await fetch(
+    const res = await fetch(
       `${process.env.NEXT_PUBLIC_STRAPI_URL}/projects?_limit=3&_sort=id:desc`
     );
-    const data = await r.json();
+    const data = await res.json();
   
     return {
       paths: data.map((project) => ({

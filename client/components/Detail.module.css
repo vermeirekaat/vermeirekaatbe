@@ -2,7 +2,7 @@
 @value primaryColor, secondaryColor, extraColor from values;
 
 .container {
-    max-height: 100vh; 
+    min-height: 100vh; 
     margin: 2rem;
     background-color: black;
     color: white;
@@ -48,8 +48,10 @@
 }
 
 .tools {
-    display: flex; 
-    justify-content: space-around;
+    display: grid; 
+    grid-template-columns: repeat(2, 7rem);
+    grid-template-rows: auto;
     font-weight: bold;
-    margin-top: 2rem;
+    width: 14rem;
+    margin: 0 auto;
 }

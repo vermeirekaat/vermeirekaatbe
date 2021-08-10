@@ -16,9 +16,7 @@ export default function Layout({ background, projects }) {
         overview = projects;
     }
 
-    const handleClickButton = e => {
-        console.log(e);
-        console.log("button is clicked");
+    const handleClickButton = () => {
         setShowProjects(!showProjects);
     }
 
