@@ -1,0 +1,55 @@
+@value values: "../styles/vars.module.css";
+@value primaryColor, secondaryColor, extraColor from values;
+
+.container {
+    max-height: 100vh; 
+    margin: 2rem;
+    background-color: black;
+    color: white;
+}
+
+.cross {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.header {
+    padding: 1rem;
+}
+
+.information {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    align-content: baseline;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: .5rem 0;
+}
+
+.tags {
+    width: 50vw;
+    display: flex; 
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.content_info {
+    font-size: .8rem;
+    line-height: 150%;
+}
+
+.tools {
+    display: flex; 
+    justify-content: space-around;
+    font-weight: bold;
+    margin-top: 2rem;
+}
