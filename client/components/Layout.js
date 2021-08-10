@@ -1,6 +1,7 @@
 import styles from "./Layout.module.css";
 import Image from "next/image";
-import {useState} from "react";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Layout({ background, projects }) {
 
@@ -16,6 +17,7 @@ export default function Layout({ background, projects }) {
     }
 
     const handleClickButton = e => {
+        console.log(e);
         console.log("button is clicked");
         setShowProjects(!showProjects);
     }
@@ -36,6 +38,8 @@ export default function Layout({ background, projects }) {
 
             <div className={styles.overview}>
                 {overview.map((project) => (
+                    <Link key={project.id} href={`/projects/${project.title}`}>
+                    <a className={styles.project}>
                     <article className={styles.project} key={project.id}>
                         <h4 className={styles.subtitle}>{project.title}</h4>
                         <div className={styles.tags}>
@@ -53,6 +57,8 @@ export default function Layout({ background, projects }) {
                             quality={50}
                         />
                     </article>
+                    </a>
+                    </Link>
                 ))}
             </div>
 

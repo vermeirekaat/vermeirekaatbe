@@ -8,7 +8,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Home({ data }) {
 
-  // console.log(data);
+  console.log(data);
 
   return (
     <div className={styles.container}>
