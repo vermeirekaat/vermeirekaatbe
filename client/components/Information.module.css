@@ -1,5 +1,5 @@
 @value values: "../styles/vars.module.css";
-@value primaryColor, secondaryColor, extraColor from values;
+@value extraColor, breakpointOne, breakpointTwo from values;
 
 .container {
     min-width: 100vw;
@@ -7,21 +7,51 @@
     padding-top: 40vh;
 }
 
+.background_content {
+    width: 20rem;
+    margin: 0 auto;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .image {
     background-image: url("/assets/heart-code.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 10rem; 
+    width: 7rem; 
     height: 20rem;
-    position: relative; 
-    left: -4rem;
 }
 
 .info {
     font-size: 1.2rem;
     color: extraColor; 
-    padding-left: 8rem;
-    padding-right: 2rem;
-    position: relative; 
-    top: -17rem;
+    width: 10rem;
+}
+
+@media screen and (min-width: breakpointOne) {
+    .background_content {
+        width: 45rem;
+    }
+
+    .image {
+        width: 15rem;
+        height: 25rem;
+    }
+
+    .info {
+        font-size: 1.5rem;
+        width: 20rem;
+        align-self: center;
+    }
+}
+
+@media screen and (min-width: breakpointTwo) {
+    .image {
+        left: 20rem;
+    }
+
+    .info {
+        left: 40rem;
+    }
 }
