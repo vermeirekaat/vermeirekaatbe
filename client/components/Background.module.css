@@ -1,0 +1,25 @@
+@value values: "../styles/vars.module.css";
+@value primaryColor, secondaryColor, extraColor from values;
+
+.container {
+    min-width: 100vw;
+    min-height: 100vh;
+    padding-top: 40vh;
+}
+
+.background_image {
+    background-image: url("/assets/heart-code.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10rem; 
+    height: 20rem;
+    margin: 0 auto;
+}
+.background_title {
+    margin: 0;
+    color: primaryColor;
+    font-size: 1.8rem;
+    text-align: center;
+    position: relative; 
+    top: -15rem;
+}

@@ -1,0 +1,79 @@
+@value values: "../styles/vars.module.css";
+@value primaryColor, secondaryColor, extraColor from values;
+
+.container {
+    min-width: 100vw;
+    padding-top: 10vh;
+}
+
+.intro {
+    padding: 2rem;
+}
+
+.title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.paragraph {
+    font-size: 1.2rem;
+    color: black; 
+}
+
+.devine {
+    font-size: 1.5rem;
+    margin: 0; 
+    text-align: center;
+    font-weight: bold;
+}
+
+.gold {
+    color: primaryColor;
+}
+
+.orange {
+    color: extraColor;
+}
+
+.blue {
+    color: secondaryColor;
+}
+
+.project {
+    margin: 2.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: .2rem;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.tags {
+    width: 50vw;
+    display: flex; 
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.bottom {
+    margin: 2.5rem;
+}
+
+.button {
+    padding: .5rem;
+    font-size: 1.5rem;
+    color: primaryColor;
+    text-align: center;
+    border: .2rem solid primaryColor; 
+    border-radius: .5rem;
+}
+
+.end {
+    font-size: 1.2rem; 
+    color: extraColor;
+    text-align: center;
+}
