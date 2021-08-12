@@ -18,14 +18,15 @@ export default function Detail({ project }) {
                 <div className={styles.information}>
                     <div className={styles.information_title}>
                         <h1 className={styles.title}>{project.title}</h1>
-                        <Link href={project.link}><a className={styles.link} target="_blank">
+                        {project.link === null ? <p></p> : <Link href={project.link}><a className={styles.link} target="_blank">
                             <Image
                                 src="/assets/external-link.svg"
                                 alt="external-link-icon"
                                 width={50}
                                 height={50}
                             />   
-                        </a></Link>
+                        </a></Link>}
+                        
                     </div>
 
                     <div className={styles.tags}>
