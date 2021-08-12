@@ -1,6 +1,7 @@
 import styles from "./Detail.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import ReactPlayer from "react-player";
 
 export default function Detail({ project }) {
 
@@ -35,14 +36,24 @@ export default function Detail({ project }) {
                     ))}
                     </div>
                 </div>
-                <Image
+                { project.video === true ? 
+                     <ReactPlayer 
+                     url={process.env.NEXT_PUBLIC_STRAPI_URL + project.banner.url}
+                     width={project.banner.width}
+                     height={project.banner.height}
+                     alt={project.title}
+                     playing={ true }
+                     loop={ true }
+                     muted={ false }/>
+                : <Image
                     src={process.env.NEXT_PUBLIC_STRAPI_URL + project.banner.url}
                     width={project.banner.width}
                     height={project.banner.height}
                     alt={project.title}
                     priority={true}
                     quality={50}
-                /> 
+                /> }
+                
             </section>
 
             <section className={styles.content}>
