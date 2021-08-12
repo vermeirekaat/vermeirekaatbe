@@ -1,0 +1,25 @@
+.container {
+    background-color: black;
+    width: 100vw;
+}
+
+.footer {
+    max-width: 40rem; 
+    margin: 0 auto;
+    padding: .5rem;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paragraph {
+    color: white;
+}
+
+.socials {
+    width: 10rem; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around;
+}

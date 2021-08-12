@@ -2,6 +2,7 @@ import Metadata from '../components/Metadata';
 import Header from "../components/Header";
 import Background from "../components/Background";
 import Information from "../components/Information";
+import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import styles from '../styles/Home.module.css';
 
@@ -21,6 +22,8 @@ export default function Home({ data }) {
       <Information background="black"></Information>
 
       <Layout background="white" projects={data}></Layout>
+
+      <Footer></Footer>
     </div>
   )
 }
