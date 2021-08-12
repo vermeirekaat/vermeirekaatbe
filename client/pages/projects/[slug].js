@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export default function Project({ data }) {
 
-    console.log(data);
+    // console.log(data);
 
     const router = useRouter(); 
     if (router.isFallback) {
@@ -28,7 +28,7 @@ export async function getStaticProps({ params }) {
   
     return {
       props: {
-        data: data.pop(), // The pop() method in JavaScript removes the last element of an array and returns that element. It will remove an item from the end of an array and return that item.
+        data: data.pop(), 
       },
       revalidate: 1,
     };

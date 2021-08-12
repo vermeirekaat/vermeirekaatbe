@@ -9,8 +9,6 @@ import styles from '../styles/Home.module.css';
 
 export default function Home({ data }) {
 
-  // console.log(data);
-
   return (
     <div className={styles.container}>
       <Metadata title="© vermeirekaat"></Metadata>
@@ -21,7 +19,10 @@ export default function Home({ data }) {
 
       <Information background="black"></Information>
 
-      <Layout background="white" projects={data}></Layout>
+      <div id="projects">
+        <Layout background="white" projects={data}></Layout>
+      </div>
+     
 
       <Footer></Footer>
     </div>

@@ -7,7 +7,7 @@ export default function Detail({ project }) {
 
     return(
         <article className={styles.container}>
-            <Link href="/"><a className={styles.cross}>
+            <Link href="/#projects"><a className={styles.cross}>
                 <Image
                     src="/assets/cross-icon.svg"
                     alt="cross-icon"
