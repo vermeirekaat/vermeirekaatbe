@@ -7,11 +7,31 @@ export default function Layout({ background, projects }) {
 
     const [showProjects, setShowProjects] = useState(false);
 
+    const gridView = {
+        mobile: 4,
+        desktop: 6,
+    }
+
     let overview;
 
+    const checkScreenWidth = () => {
+        if (typeof window !== "undefined") {
+            const screenWidth = window.screen.width;
+            let gridItems;
+
+            if (screenWidth <= 1024) {
+                gridItems = gridView.mobile;
+            }
+            if (screenWidth >= 1024) {
+                gridItems = gridView.desktop; 
+            }
+            return gridItems;
+        }
+    }
+
     if (showProjects === false) {
-        overview = projects.slice(0, 4);
-        // console.log("false");
+        const grid = checkScreenWidth();
+        overview = projects.slice(0, grid);
     } else if (showProjects === true) {
         overview = projects;
     }

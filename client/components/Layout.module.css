@@ -85,6 +85,7 @@
     text-align: center;
     border: .2rem solid primaryColor; 
     border-radius: .5rem;
+    cursor: pointer;
 }
 
 .end {
