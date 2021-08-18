@@ -1,9 +1,34 @@
 import styles from "./Detail.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import ReactPlayer from "react-player";
 
 export default function Detail({ project }) {
+
+    const [muteVideo, setMuteVideo] = useState(true);
+
+    const sound = {
+        off: {
+            type: true,
+            svg: "/assets/sound-on.svg",
+        },
+        on: { 
+            type: false,
+            svg: "/assets/sound-off.svg",
+        }
+    }
+
+    const checkSound = () => {
+        let svg;
+        if (muteVideo === true) {
+            svg = sound.on.svg; 
+        }
+        if (muteVideo === false) {
+            svg = sound.off.svg
+        }
+        return svg;
+    }
 
     return(
         <article className={styles.container}>
@@ -26,8 +51,7 @@ export default function Detail({ project }) {
                                 width={50}
                                 height={50}
                             />   
-                        </a></Link>}
-                        
+                        </a></Link>}    
                     </div>
 
                     <div className={styles.tags}>
@@ -37,13 +61,24 @@ export default function Detail({ project }) {
                     </div>
                 </div>
                 { project.video === true ? 
-                     <ReactPlayer 
-                     url={"https:" + project.banner.fields.file.url}
-                     layout="fill"
-                     alt={project.title}
-                     playing={ true }
-                     loop={ true }
-                     muted={ false }/>
+                    <div className={styles.video}>
+                        <ReactPlayer 
+                        url={"https:" + project.banner.fields.file.url}
+                        layout="fill"
+                        alt={project.title}
+                        playing={ true }
+                        loop={ true }
+                        muted={ muteVideo }/>
+                     <div className={styles.sound} onClick={(e) => setMuteVideo(!muteVideo)}>
+                         <Image
+                                src={checkSound()}
+                                alt="external-link-icon"
+                                width={25}
+                                height={25}
+                            />
+                     </div>
+                    </div>
+                              
                 : <Image
                     src={"https:" + project.banner.fields.file.url}
                     width={project.banner.fields.file.details.image.width}

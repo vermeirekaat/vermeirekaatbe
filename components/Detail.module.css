@@ -66,6 +66,16 @@
     margin: 0 auto;
 }
 
+.video {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sound {
+    margin-top: 1rem;
+}
+
 @media screen and (min-width: breakpointOne) {
     .header {
         max-width: 40rem;
