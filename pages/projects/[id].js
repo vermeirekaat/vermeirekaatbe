@@ -8,9 +8,9 @@ export default function Project({ project }) {
 
   if (!project) {
     return (
-        <div className={styles.container}>
-            <div className={styles.information}>
-                <h2 className={styles.title}>LOADING...</h2>
+        <div>
+            <div>
+                <h2>LOADING...</h2>
             </div>
         </div>
     )
