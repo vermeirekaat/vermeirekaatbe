@@ -19,7 +19,7 @@ export default function Detail({ project }) {
                 <div className={styles.information}>
                     <div className={styles.information_title}>
                         <h1 className={styles.title}>{project.title}</h1>
-                        {project.link === null ? <p></p> : <Link href={project.link}><a className={styles.link} target="_blank">
+                        {!project.link ? <p></p> : <Link href={project.link}><a className={styles.link} target="_blank">
                             <Image
                                 src="/assets/external-link.svg"
                                 alt="external-link-icon"
@@ -32,23 +32,22 @@ export default function Detail({ project }) {
 
                     <div className={styles.tags}>
                     {project.tags.map((tag) => (
-                        <p className={styles.tag} key={tag.name}>{tag.short}</p>
+                        <p className={styles.tag} key={tag.fields.name}>{tag.fields.short}</p>
                     ))}
                     </div>
                 </div>
                 { project.video === true ? 
                      <ReactPlayer 
-                     url={process.env.NEXT_PUBLIC_STRAPI_URL + project.banner.url}
-                     width={project.banner.width}
-                     height={project.banner.height}
+                     url={"https:" + project.banner.fields.file.url}
+                     layout="fill"
                      alt={project.title}
                      playing={ true }
                      loop={ true }
                      muted={ false }/>
                 : <Image
-                    src={process.env.NEXT_PUBLIC_STRAPI_URL + project.banner.url}
-                    width={project.banner.width}
-                    height={project.banner.height}
+                    src={"https:" + project.banner.fields.file.url}
+                    width={project.banner.fields.file.details.image.width}
+                    height={project.banner.fields.file.details.image.height}
                     alt={project.title}
                     priority={true}
                     quality={50}
@@ -57,10 +56,10 @@ export default function Detail({ project }) {
             </section>
 
             <section className={styles.content}>
-                <p className={styles.content_info}>{project.info}</p>
+                <p className={styles.content_info}>{project.description.content[0].content[0].value}</p>
                 <div className={styles.tools}>
                 {project.tools.map((tool) => (
-                        <p className={styles.tool} key={tool.name}>{tool.name}</p>
+                        <p className={styles.tool} key={tool.fields.name}>{tool.fields.name}</p>
                     ))}
                 </div>
             </section>
