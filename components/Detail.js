@@ -3,10 +3,30 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import ReactPlayer from "react-player";
+import { useRouter } from "next/router";
 
 export default function Detail({ project }) {
+    const router = useRouter();
 
     const [muteVideo, setMuteVideo] = useState(true);
+    const [screenWidth, setScreenWidth] = useState(true); 
+
+    /* const checkScreenWidth = () => {
+         if (typeof window !== "undefined") {
+            const screenWidth = window.screen.width; 
+    
+            if (screenWidth <= 640) {
+                setScreenWidth(true);
+            }
+            if (screenWidth >= 640) {
+                setScreenWidth(false);
+            }
+        }
+    }
+
+    if (router.isReady) {
+        checkScreenWidth()
+    } */
 
     const sound = {
         off: {
@@ -62,13 +82,25 @@ export default function Detail({ project }) {
                 </div>
                 { project.video === true ? 
                     <div className={styles.video}>
-                        <ReactPlayer 
-                        url={"https:" + project.banner.fields.file.url}
-                        layout="fill"
-                        alt={project.title}
-                        playing={ true }
-                        loop={ true }
-                        muted={ muteVideo }/>
+                        <div className={styles.video_file}>
+                            { screenWidth ? <ReactPlayer 
+                            url={"https:" + project.banner.fields.file.url}
+                            width={350}
+                            height="auto"
+                            alt={project.title}
+                            playing={ true }
+                            loop={ true }
+                            muted={ muteVideo }/> : 
+                            <ReactPlayer 
+                            url={"https:" + project.banner.fields.file.url}
+                            width={600}
+                            height="auto"
+                            alt={project.title}
+                            playing={ true }
+                            loop={ true }
+                            muted={ muteVideo }/>}
+                        </div>
+                        
                      <div className={styles.sound} onClick={(e) => setMuteVideo(!muteVideo)}>
                          <Image
                                 src={checkSound()}
