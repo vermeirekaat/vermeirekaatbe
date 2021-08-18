@@ -58,7 +58,7 @@ export default function Layout({ background, projects }) {
 
             <div className={styles.overview}>
                 {overview.map((project) => (
-                    <Link key={project.sys.id} href={`/projects/${project.slug}`}>
+                    <Link key={project.sys.id} href={`/projects/${project.sys.id}`}>
                     <a className={styles.link}>
                     <article className={styles.project} key={project.sys.id}>
                         <div className={styles.project_container}>
