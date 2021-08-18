@@ -5,6 +5,8 @@ import { useState } from "react";
 
 export default function Layout({ background, projects }) {
 
+    console.log(projects);
+
     const [showProjects, setShowProjects] = useState(false);
 
     const gridView = {
@@ -50,24 +52,24 @@ export default function Layout({ background, projects }) {
                     <p className={styles.gold}>Development</p>
                     <p className={styles.orange}>Research</p>
                     <p className={styles.blue}>Design</p>
-                </div>
+            </div>
                 
             </div>
 
             <div className={styles.overview}>
                 {overview.map((project) => (
-                    <Link key={project.id} href={`/projects/${project.slug}`}>
+                    <Link key={project.sys.id} href={`/projects/${project.slug}`}>
                     <a className={styles.link}>
-                    <article className={styles.project} key={project.id}>
+                    <article className={styles.project} key={project.sys.id}>
                         <div className={styles.project_container}>
-                             <h4 className={styles.subtitle}>{project.title}</h4>
+                             <h4 className={styles.subtitle}>{project.fields.title}</h4>
                         <div className={styles.tags}>
-                            {project.tags.map((tag) => (
-                                <p className={styles.tag} key={tag.name}>{tag.short}</p>
+                            {project.fields.tags.map((tag) => (
+                                <p className={styles.tag} key={tag.fields.name}>{tag.fields.short}</p>
                             ))}
                         </div>
                         <Image
-                            src={process.env.NEXT_PUBLIC_STRAPI_URL + project.cover.url}
+                            src={"https:" + project.fields.cover.fields.file.url}
                             width={250}
                             height={200}
                             alt={project.title}

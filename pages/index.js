@@ -6,8 +6,10 @@ import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import styles from '../styles/Home.module.css';
 
+const contentful = require("contentful");
 
-export default function Home({ data }) {
+export default function Home({ result }) {
+  const data = result.items;
 
   return (
     <div className={styles.container}>
@@ -30,12 +32,17 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/projects?_sort=id:desc`);
-  const data = await res.json();
+
+  const client = contentful.createClient({
+    space: process.env.CONTENTFUL_SPACE,
+    accessToken: process.env.CONTENTFUL_TOKEN
+  }); 
+
+  const result = await client.getEntries({ content_type: "project"});
 
   return {
     props: {
-      data,
+      result
     }
   }
 };
