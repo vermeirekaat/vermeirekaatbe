@@ -6,10 +6,15 @@ const contentful = require("contentful");
 
 export default function Project({ project }) {
 
-    const router = useRouter(); 
-    if (router.isFallback) {
-        return <p>Loading...</p>
-    }
+  if (!project) {
+    return (
+        <div className={styles.container}>
+            <div className={styles.information}>
+                <h2 className={styles.title}>LOADING...</h2>
+            </div>
+        </div>
+    )
+}
 
     return (
         <article>
