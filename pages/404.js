@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import styles from "../styles/404.module.css";
 
 export default function NotFound () {
 
@@ -8,8 +9,13 @@ export default function NotFound () {
   useEffect(() => {
     setTimeout(() => {
       router.push('/')
-    }, 1000);
+    }, 3500);
   }, []);
 
-  return <p>Redirect...</p>
+  return (
+    <div className={styles.glitch_container}>
+        <p className={styles.glitch}>REDIRECT</p>
+        <div className={styles.background}></div>
+    </div>
+  )
 }
