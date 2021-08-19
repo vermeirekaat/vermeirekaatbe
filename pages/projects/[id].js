@@ -6,6 +6,21 @@ const contentful = require("contentful");
 
 export default function Project({ project }) {
 
+    const defineVideoScreen = () => {
+        if (typeof window !== "undefined") {
+          const screenWidth = window.screen.width;
+          let videoWidth;
+    
+          if (screenWidth <= 640) {
+              videoWidth = 350;
+          }
+          if (screenWidth >= 640) {
+              videoWidth = 600; 
+          }
+          return videoWidth;
+        }
+      }
+
   if (!project) {
     return (
         <div>
@@ -20,7 +35,7 @@ export default function Project({ project }) {
         <article>
             <Metadata title={project.fields.title}></Metadata>
 
-            <Detail project={project.fields}></Detail>
+            <Detail project={project.fields} videoWidth={defineVideoScreen()}></Detail>
         </article>
     )
 }

@@ -3,27 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import ReactPlayer from "react-player";
+import { motion } from "framer-motion";
 
-export default function Detail({ project }) {
+export default function Detail({ project, videoWidth }) {
 
     const [muteVideo, setMuteVideo] = useState(true);
-
-    /* const checkScreenWidth = () => {
-         if (typeof window !== "undefined") {
-            const screenWidth = window.screen.width; 
-    
-            if (screenWidth <= 640) {
-                setScreenWidth(true);
-            }
-            if (screenWidth >= 640) {
-                setScreenWidth(false);
-            }
-        }
-    }
-
-    if (router.isReady) {
-        checkScreenWidth()
-    } */
 
     const sound = {
         off: {
@@ -48,7 +32,11 @@ export default function Detail({ project }) {
     }
 
     return(
-        <article className={styles.container}>
+        <motion.article className={styles.container}
+        initial={{ y: "10rem", opacity: 0 }}
+        animate={{ y: 0, opacity: 1}}
+        transition={{ ease: "easeInOut", duration: 1, delay: .5 }}
+        >
             <Link href="/#projects"><a className={styles.cross}>
                 <Image
                     src="/assets/cross-icon.svg"
@@ -80,22 +68,14 @@ export default function Detail({ project }) {
                 { project.video === true ? 
                     <div className={styles.video}>
                         <div className={styles.video_file}>
-                            { screenWidth ? <ReactPlayer 
-                            url={"https:" + project.banner.fields.file.url}
-                            width={350}
-                            height="auto"
-                            alt={project.title}
-                            playing={ true }
-                            loop={ true }
-                            muted={ muteVideo }/> : 
                             <ReactPlayer 
                             url={"https:" + project.banner.fields.file.url}
-                            width={600}
+                            width={videoWidth}
                             height="auto"
                             alt={project.title}
                             playing={ true }
                             loop={ true }
-                            muted={ muteVideo }/>}
+                            muted={ muteVideo }/>
                         </div>
                         
                      <div className={styles.sound} onClick={(e) => setMuteVideo(!muteVideo)}>
@@ -127,6 +107,6 @@ export default function Detail({ project }) {
                     ))}
                 </div>
             </section>
-        </article>
+        </motion.article>
     )
 }
