@@ -1,9 +1,10 @@
 @value values: "../styles/vars.module.css";
-@value primaryColor, breakpointOne, breakpointTwo from values;
+@value primaryColor, extraColor, breakpointOne, breakpointTwo from values;
 
 .container {
     min-height: 100vh;
     min-width: 100vw;
+    background-color: black;
 }
 
 .header {
@@ -82,10 +83,23 @@
 .background_title {
     margin: 0;
     color: primaryColor;
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center;
     position: relative; 
     top: -13rem;
+}
+
+.info {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0 10vw;
+}
+
+.paragraph {
+    font-size: 1.2rem;
+    color: extraColor; 
+    width: 10rem;
 }
 
 @media screen and (min-width: breakpointOne) {
@@ -122,7 +136,16 @@
     }
 
     .background_title {
-        font-size: 3rem;
+        font-size: 5rem;
         top: -18rem;
+    }
+
+    .info {
+        margin: 0 20vw;
+    }
+
+    .paragraph {
+        font-size: 1.5rem;
+        width: 20rem;
     }
 }

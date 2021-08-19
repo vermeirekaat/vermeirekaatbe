@@ -1,11 +1,12 @@
 import styles from "./Header.module.css";
 import { motion } from "framer-motion";
 
-export default function Header ({ background, opacityAni, positionBack, opacityCode, scaleCode }) {
+export default function Header ({ opacityHeader, positionBackground, opacityCode, scaleCode, moveCode, scaleImage, imageX, imageY, moveText, opacityText }) {
+
     return(
-        <section className={styles.container} style={{ backgroundColor: background }}>
+        <section className={styles.container}>
             <motion.div className={styles.header} 
-            style={{ opacity: opacityAni }}>
+            style={{ opacity: opacityHeader }}>
                 <motion.h2 className={styles.greeting}
                     initial={{ y: "-10rem", opacity: 0 }}
                     animate={{ y: 0, opacity: 1}}
@@ -34,10 +35,18 @@ export default function Header ({ background, opacityAni, positionBack, opacityC
             </motion.div>
 
             <motion.div className={styles.background}
-            style={{ y: positionBack }}>
-                <div className={styles.background_image}></div>
+            style={{ y: positionBackground }}>
+                <motion.div className={styles.background_image}
+                style={{ scale: scaleImage, x: imageX, y: imageY}}
+                ></motion.div>
                 <motion.h2 className={styles.background_title}
-                style={{ opacity: opacityCode, scale: scaleCode}}>I have a heart of code</motion.h2> 
+                style={{ opacity: opacityCode, scale: scaleCode, y: moveCode }}>I have a heart of code</motion.h2> 
+            </motion.div>
+
+            <motion.div className={styles.info}
+            style={{ y: moveText, opacity: opacityText }}
+            >
+                <p className={styles.paragraph}>I create digital products that fullfil the user&apos;s needs. Always asking for feedback to learn and improve my skills.</p>
             </motion.div>
         </section>
     )
