@@ -3,13 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import ReactPlayer from "react-player";
-import { useRouter } from "next/router";
 
 export default function Detail({ project }) {
-    const router = useRouter();
 
     const [muteVideo, setMuteVideo] = useState(true);
-    const [screenWidth, setScreenWidth] = useState(true); 
 
     /* const checkScreenWidth = () => {
          if (typeof window !== "undefined") {
