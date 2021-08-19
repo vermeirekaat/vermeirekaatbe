@@ -1,5 +1,5 @@
 @value values: "../styles/vars.module.css";
-@value breakpointOne, breakpointTwo from values;
+@value primaryColor, breakpointOne, breakpointTwo from values;
 
 .container {
     min-height: 100vh;
@@ -67,6 +67,27 @@
     font-weight: lighter;
 }
 
+.background {
+    padding-top: 40vh;
+}
+
+.background_image {
+    background-image: url("/assets/heart-code.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10rem; 
+    height: 20rem;
+    margin: 0 auto;
+}
+.background_title {
+    margin: 0;
+    color: primaryColor;
+    font-size: 1.8rem;
+    text-align: center;
+    position: relative; 
+    top: -13rem;
+}
+
 @media screen and (min-width: breakpointOne) {
     .header {
         width: 40rem;
@@ -89,5 +110,19 @@
 
     .profile_name {
         font-size: 2.5rem;
+    }
+
+    .background {
+        padding-top: 20vh;
+    }
+
+    .background_image {
+        width: 20rem;
+        height: 30rem;
+    }
+
+    .background_title {
+        font-size: 3rem;
+        top: -18rem;
     }
 }

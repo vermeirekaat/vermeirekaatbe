@@ -5,8 +5,6 @@ import { useState } from "react";
 
 export default function Layout({ background, projects }) {
 
-    console.log(projects);
-
     const [showProjects, setShowProjects] = useState(false);
 
     const gridView = {
@@ -52,8 +50,7 @@ export default function Layout({ background, projects }) {
                     <p className={styles.gold}>Development</p>
                     <p className={styles.orange}>Research</p>
                     <p className={styles.blue}>Design</p>
-            </div>
-                
+                </div>    
             </div>
 
             <div className={styles.overview}>
