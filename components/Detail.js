@@ -49,7 +49,7 @@ export default function Detail({ project, videoWidth }) {
                 <div className={styles.information}>
                     <div className={styles.information_title}>
                         <h1 className={styles.title}>{project.title}</h1>
-                        {!project.link ? <p></p> : <Link href={'//'+project.link} passHref={true}><a className={styles.link} target="_blank">
+                        {!project.link ? <p></p> : <Link href={project.link} passHref={true}><a className={styles.link} target="_blank">
                             <Image
                                 src="/assets/external-link.svg"
                                 alt="external-link-icon"
@@ -78,7 +78,7 @@ export default function Detail({ project, videoWidth }) {
                             muted={ muteVideo }/>
                         </div>
                         
-                     <div className={styles.sound} onClick={(e) => setMuteVideo(!muteVideo)}>
+                     <div className={styles.sound} onClick={() => setMuteVideo(!muteVideo)}>
                          <Image
                                 src={checkSound()}
                                 alt="external-link-icon"

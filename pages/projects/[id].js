@@ -1,6 +1,5 @@
 import Metadata from "../../components/Metadata";
 import Detail from "../../components/Detail";
-import { useRouter } from "next/router";
 
 const contentful = require("contentful");
 
@@ -71,7 +70,7 @@ export async function getStaticProps({ params }) {
   if (!items.length) {
       return {
           redirect: {
-              destination: "/",
+              destination: "/#projects",
               permanent: false,
           }
       }
