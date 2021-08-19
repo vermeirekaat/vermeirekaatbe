@@ -1,7 +1,5 @@
 import Metadata from '../components/Metadata';
 import Header from "../components/Header";
-import Background from "../components/Background";
-import Information from "../components/Information";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import styles from '../styles/Home.module.css';
@@ -54,6 +52,18 @@ export default function Home({ result }) {
     opacityText: {
       desktop: useTransform(scrollYProgress, [.25, .35], [0, 1]),
       mobile: useTransform(scrollYProgress, [.15, .25], [0, 1])
+    },
+    opacityIntro: {
+      desktop: useTransform(scrollYProgress, [.45, .5], [0, 1]),
+      mobile: useTransform(scrollYProgress, [.4, .45], [0, 1])
+    },
+    opacityProjects: {
+      desktop: useTransform(scrollYProgress, [.5, .55], [0, 1]),
+      mobile: useTransform(scrollYProgress, [.45, .5], [0, 1])
+    },
+    positionProjects: {
+      desktop: useTransform(scrollYProgress, [.5, .55], [100, 0]),
+      mobile: useTransform(scrollYProgress, [.45, .5], [50, 0])
     }
   }
 
@@ -89,7 +99,11 @@ export default function Home({ result }) {
       ></Header>
 
       <div id="projects">
-        <Layout background="white" projects={data}></Layout>
+        <Layout projects={data} 
+                opacityIntro={checkScreenWidth(animations.opacityIntro)}
+                opacityProjects={checkScreenWidth(animations.opacityProjects)}
+                positionProjects={checkScreenWidth(animations.positionProjects)}
+        ></Layout>
       </div>
 
       <Footer></Footer>
