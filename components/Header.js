@@ -46,7 +46,7 @@ export default function Header ({ opacityHeader, positionBackground, opacityCode
             <motion.div className={styles.info}
             style={{ y: moveText, opacity: opacityText }}
             >
-                <p className={styles.paragraph}>I create digital products that fullfil the user&apos;s needs. Always asking for feedback to learn and improve my skills.</p>
+                <p className={styles.paragraph}>I create digital products that fullfil the user&apos;s needs. <br></br> I am passionate about writing code and learning new approaches within webdevelopment. <br></br> I am interested in the research process behind projects and looking forward to improve my skills.</p>
             </motion.div>
         </section>
     )

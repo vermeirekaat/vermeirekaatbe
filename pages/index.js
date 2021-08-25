@@ -84,7 +84,7 @@ export default function Home({ result }) {
 
   return (
     <div className={styles.container}>
-      <Metadata title="© vermeirekaat"></Metadata>
+      <Metadata title="@vermeirekaat"></Metadata>
 
       <Header opacityHeader={checkScreenWidth(animations.opacityHeader)}
               positionBackground={checkScreenWidth(animations.positionBackground)}
