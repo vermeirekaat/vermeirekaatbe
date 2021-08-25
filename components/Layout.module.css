@@ -71,13 +71,14 @@
 @media screen and (min-width: breakpointOne) {
     .overview {
         display: grid; 
-        grid-template-columns: repeat(3, 20rem);
+        grid-template-columns: repeat(2, calc(100vw/2));
+        max-width: 100vw;
     }
 }
 
 @media screen and (min-width: breakpointTwo) {
     .overview {
         display: grid; 
-        grid-template-columns: repeat(5, 25rem);
+        grid-template-columns: repeat(4, calc(100vw/4));
     }
 }

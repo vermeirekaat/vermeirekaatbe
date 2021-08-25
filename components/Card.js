@@ -18,7 +18,7 @@ export default function Card({ card }) {
                     </div>
                     <div className={styles.image_container}>
                         <div className={styles.image_overlay}></div>
-                        <img className={styles.project_image}
+                        <img className={styles.image_project}
                             src={"https:" + card.fields.cover.fields.file.url}>
                         </img>
                     </div>

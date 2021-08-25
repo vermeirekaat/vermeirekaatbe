@@ -25,7 +25,7 @@
     z-index: 1;
 }
 
-.project_image {
+.image_project {
     width: 100vw;
     height: 20rem;
     object-fit: cover;
@@ -53,6 +53,7 @@
     display: flex; 
     justify-content: space-between;
     text-transform: uppercase;
+    color: white;
 }
 
 .tag {
@@ -61,15 +62,31 @@
 }
 
 @media screen and (min-width: breakpointOne) {
-    .project_image {
-        width: 20rem;
-        height: 15rem;
+    .image_container {
+        width: calc(100vw/2);
+    }
+    .image_overlay {
+        width: calc(100vw/2);
+    }
+    .image_project {
+        width: calc(100vw/2);
+    }
+    .project_container {
+        width: 10rem;
     }
 }
 
 @media screen and (min-width: breakpointTwo) {
-    .project_image {
-        width: 25rem;
-        height: 20rem;
+    .image_container {
+        width: calc(100vw/4);
+    }
+    .image_overlay {
+        width: calc(100vw/4);
+    }
+    .image_project {
+        width: calc(100vw/4);
+    }
+    .project_container {
+        width: 15rem;
     }
 }
