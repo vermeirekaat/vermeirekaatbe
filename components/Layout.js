@@ -13,7 +13,7 @@ export default function Layout({ projects, opacityIntro, opacityProjects, positi
                 <p className={styles.paragraph}>For the past two years I have gained knowledge of three subjects. Each with a focus on real-life cases and projects. Not all projects are the best but I am proud of everything that I have accomplished Moreover, I am glad that I have learned from my mistakes so that I can improve my skills.</p>
 
                 <div className={styles.devine}>
-                    <p className={styles.gold}>Development</p>
+                    <p className={styles.blue}>Development</p>
                     <p className={styles.orange}>Research</p>
                     <p className={styles.gold}>Design</p>
                 </div>    
@@ -22,7 +22,7 @@ export default function Layout({ projects, opacityIntro, opacityProjects, positi
             style={{ opacity: opacityProjects, y: positionProjects }}
             >
                 {projects.map((project) => (
-                    <Card card={project}></Card>
+                    <Card id={project.sys.id} card={project}></Card>
                 ))}
             </motion.div>
         </section>
