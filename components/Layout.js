@@ -1,6 +1,7 @@
 import styles from "./Layout.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import Card from "./Card.js";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
@@ -66,28 +67,7 @@ export default function Layout({ projects, opacityIntro, opacityProjects, positi
             style={{ opacity: opacityProjects, y: positionProjects }}
             >
                 {overview.map((project) => (
-                    <Link key={project.sys.id} href={`/projects/${project.sys.id}`}>
-                    <a className={styles.link}>
-                    <article className={styles.project} key={project.sys.id}>
-                        <div className={styles.project_container}>
-                             <h4 className={styles.subtitle}>{project.fields.title}</h4>
-                        <div className={styles.tags}>
-                            {project.fields.tags.map((tag) => (
-                                <p className={styles.tag} key={tag.fields.name}>{tag.fields.short}</p>
-                            ))}
-                        </div>
-                        <Image
-                            src={"https:" + project.fields.cover.fields.file.url}
-                            width={250}
-                            height={200}
-                            alt={project.title}
-                            priority={true}
-                            quality={50}
-                        />
-                        </div>
-                    </article>
-                    </a>
-                    </Link>
+                    <Card card={project}></Card>
                 ))}
             </motion.div> </> : 
             <>
@@ -105,28 +85,7 @@ export default function Layout({ projects, opacityIntro, opacityProjects, positi
             </div>
             <div className={styles.overview}>
                 {overview.map((project) => (
-                    <Link key={project.sys.id} href={`/projects/${project.sys.id}`}>
-                    <a className={styles.link}>
-                    <article className={styles.project} key={project.sys.id}>
-                        <div className={styles.project_container}>
-                             <h4 className={styles.subtitle}>{project.fields.title}</h4>
-                        <div className={styles.tags}>
-                            {project.fields.tags.map((tag) => (
-                                <p className={styles.tag} key={tag.fields.name}>{tag.fields.short}</p>
-                            ))}
-                        </div>
-                        <Image
-                            src={"https:" + project.fields.cover.fields.file.url}
-                            width={250}
-                            height={200}
-                            alt={project.title}
-                            priority={true}
-                            quality={50}
-                        />
-                        </div>
-                    </article>
-                    </a>
-                    </Link>
+                    <Card card={project}></Card>
                 ))}
             </div> </>
             }
