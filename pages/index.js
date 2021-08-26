@@ -126,13 +126,13 @@ export default function Home({ result }) {
               moveText={checkScreenWidth(animations.moveText)}
               opacityText={checkScreenWidth(animations.opacityText)}
               dissolveText={checkScreenWidth(animations.dissolveText)}
+              opacityIntro={checkScreenWidth(animations.opacityIntro)}
+              moveIntro={checkScreenWidth(animations.moveIntro)}
+              scaleBlocks={checkScreenWidth(animations.scaleBlocks)}
       ></Header>
 
       <div id="projects">
         <Layout projects={data} 
-                opacityIntro={checkScreenWidth(animations.opacityIntro)}
-                moveIntro={checkScreenWidth(animations.moveIntro)}
-                scaleBlocks={checkScreenWidth(animations.scaleBlocks)}
                 opacityProjects={checkScreenWidth(animations.opacityProjects)}
                 positionProjects={checkScreenWidth(animations.positionProjects)}
                 hover={checkHoverEffect(animations.hoverEffect)}
