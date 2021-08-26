@@ -12,16 +12,18 @@ export default function Card({ card, mobile }) {
                 { mobile === true ? 
                 <article className={styles.project} key={card.sys.id}>
                     <div className={styles.project_container}>
-                        <h4 className={styles.subtitle}
-                            style={{ opacity: 1 }}
-                        >{card.fields.title}</h4> 
-                            <div className={styles.tags}
-                                style={{ opacity: 1 }}
+                        <motion.h4 className={styles.subtitle}
+                            initial={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
+                        >{card.fields.title}</motion.h4> 
+                            <motion.div className={styles.tags}
+                                initial={{ opacity: 1 }}
+                                animate={{ opacity: 1 }}
                             >
                             {card.fields.tags.map((tag) => (
                                 <p className={styles.tag} key={tag.fields.name} style={{ backgroundColor: tag.fields.color}}>{tag.fields.short}</p>
                             ))}
-                            </div> 
+                            </motion.div> 
                     </div>
                     <div className={styles.image_container}>
                         <div className={styles.image_overlay}></div>
