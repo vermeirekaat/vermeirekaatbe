@@ -37,6 +37,7 @@ export default function Detail({ project, videoWidth }) {
         animate={{ y: 0, opacity: 1}}
         transition={{ ease: "easeInOut", duration: 1, delay: .5 }}
         >
+            <div className={styles.middle}>
             <Link href="/#projects"><a className={styles.cross}>
                 <Image
                     src="/assets/cross-icon.svg"
@@ -107,6 +108,7 @@ export default function Detail({ project, videoWidth }) {
                     ))}
                 </div>
             </section>
+            </div>
         </motion.article>
     )
 }

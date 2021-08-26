@@ -11,10 +11,10 @@ export default function Project({ project }) {
           let videoWidth;
     
           if (screenWidth <= 640) {
-              videoWidth = 350;
+              videoWidth = 300;
           }
           if (screenWidth >= 640) {
-              videoWidth = 600; 
+              videoWidth = 550; 
           }
           return videoWidth;
         }
@@ -32,7 +32,7 @@ export default function Project({ project }) {
 
     return (
         <article>
-            <Metadata title={project.fields.title}></Metadata>
+            <Metadata title={"@vermeirekaat - " + project.fields.title}></Metadata>
 
             <Detail project={project.fields} videoWidth={defineVideoScreen()}></Detail>
         </article>

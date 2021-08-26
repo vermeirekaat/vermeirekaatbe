@@ -21,60 +21,61 @@ export default function Home({ result }) {
       desktop: useTransform(scrollYProgress, [0, .2], [50, -200]),
       mobile: useTransform(scrollYProgress, [0, .1], [50, -300])
     },
-    opacityCode: {
-      desktop: useTransform(scrollYProgress, [.25, .35], [1, 0]),
-      mobile: useTransform(scrollYProgress, [.15, .2], [1, 0])
-    },
     scaleCode: {
       desktop: useTransform(scrollYProgress, [.08, .15], [.5, 1]),
-      mobile: useTransform(scrollYProgress, [0, .1], [.5, 1])   
+      mobile: useTransform(scrollYProgress, [0, .05], [.5, 1])   
+    },
+    opacityCode: {
+      desktop: useTransform(scrollYProgress, [.25, .35], [1, 0]),
+      mobile: useTransform(scrollYProgress, [.08, .12], [1, 0])
     },
     moveCode: {
       desktop: useTransform(scrollYProgress, [.20, .35], [0, -300]),
-      mobile: useTransform(scrollYProgress, [.15, .2], [0, -150])
+      mobile: useTransform(scrollYProgress, [.08, .12], [0, -150])
     },
     scaleImage: {
       desktop: useTransform(scrollYProgress, [.20, .30], [1, .5]), 
-      mobile: useTransform(scrollYProgress, [.15, .25], [1, .7]),
+      mobile: useTransform(scrollYProgress, [.08, .1], [1.5, 1]),
     },
     moveImageX: {
       desktop: useTransform(scrollYProgress, [.20, .30], [0, -300]),
-      mobile: useTransform(scrollYProgress,[.15, .25], [0, -100])
+      mobile: useTransform(scrollYProgress,[.08, .1], [0, -100])
     },
     moveImageY: {
       desktop: useTransform(scrollYProgress, [.20, .30], [0, 650]),
-      mobile: useTransform(scrollYProgress,[.15, .25], [0, 300])
+      mobile: useTransform(scrollYProgress,[.08, .1], [0, 400])
     },
     moveText: {
       desktop: useTransform(scrollYProgress, [.25, .30], [100, 0]),
-      mobile: useTransform(scrollYProgress, [.15, .25], [0, -300])
+      mobile: useTransform(scrollYProgress, [.08, .1], [0, -300])
     }, 
     opacityText: {
       desktop: useTransform(scrollYProgress, [.25, .30], [0, 1]),
-      mobile: useTransform(scrollYProgress, [.15, .25], [0, 1])
+      mobile: useTransform(scrollYProgress, [.08, .1], [0, 1])
     },
     dissolveText: {
-      desktop: useTransform(scrollYProgress, [.4, .45], [1, 0])
+      desktop: useTransform(scrollYProgress, [.4, .45], [1, 0]),
+      mobile: useTransform(scrollYProgress, [.15, .2], [1, 0])
     },
     opacityIntro: {
       desktop: useTransform(scrollYProgress, [.45, .5], [0, 1]),
-      mobile: useTransform(scrollYProgress, [.4, .45], [0, 1])
+      mobile: useTransform(scrollYProgress, [.15, .2], [0, 1])
     },
     moveIntro: {
       desktop: useTransform(scrollYProgress, [.45, .5], [100, 0]),
-      mobile: useTransform(scrollYProgress, [.4, .45], [0, 1])
+      mobile: useTransform(scrollYProgress, [.15, .2], [50, 0])
     },
     scaleBlocks: {
       desktop: useTransform(scrollYProgress, [.5, .53], [0, 1]),
-      mobile: useTransform(scrollYProgress, [.4, .45], [0, 1])
+      mobile: useTransform(scrollYProgress, [.2, .25], [0, 1])
     },
     opacityProjects: {
       desktop: useTransform(scrollYProgress, [.55, .6], [0, 1]),
-      mobile: useTransform(scrollYProgress, [.45, .5], [0, 1])
+      mobile: useTransform(scrollYProgress, [.25, .3], [0, 1])
     },
     positionProjects: {
       desktop: useTransform(scrollYProgress, [.55, .6], [100, 0]),
-      mobile: useTransform(scrollYProgress, [.45, .5], [50, 0])
+      mobile: useTransform(scrollYProgress, [.25, .3], [50, 0])
     },
     hoverEffect: {
       desktop: false,
