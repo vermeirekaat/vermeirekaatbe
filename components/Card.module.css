@@ -41,10 +41,6 @@
     transition: .5s ease-in;
 }
 
-.project_container:hover + .image_container img {
-    transform: scale(1.2);
-}
-
 .project_container {
     grid-row: 1;
     grid-column: 1;
@@ -115,6 +111,12 @@
         width: 15rem;
     }
     .project_description {
-        width: 20rem;
+        max-width: 20rem;
+    }
+    .project_container:hover + .image_container img {
+        transform: scale(1.2);
+    } 
+    .project_container:hover + .image_container .image_overlay {
+        background-color: rgba(0, 0, 0, 0.75);
     }
 }

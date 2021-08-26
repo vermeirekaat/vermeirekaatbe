@@ -2,7 +2,7 @@ import styles from "./Layout.module.css";
 import Card from "./Card.js";
 import { motion } from "framer-motion";
 
-export default function Layout({ projects, opacityIntro, opacityProjects, positionProjects }) {
+export default function Layout({ projects, opacityIntro, opacityProjects, positionProjects, hover }) {
 
     return(
         <section className={styles.container}>
@@ -22,7 +22,7 @@ export default function Layout({ projects, opacityIntro, opacityProjects, positi
             style={{ opacity: opacityProjects, y: positionProjects }}
             >
                 {projects.map((project) => (
-                    <Card key={project.sys.id} card={project}></Card>
+                    <Card key={project.sys.id} card={project} mobile={hover}></Card>
                 ))}
             </motion.div>
         </section>

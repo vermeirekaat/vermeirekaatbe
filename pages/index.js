@@ -64,6 +64,10 @@ export default function Home({ result }) {
     positionProjects: {
       desktop: useTransform(scrollYProgress, [.5, .55], [100, 0]),
       mobile: useTransform(scrollYProgress, [.45, .5], [50, 0])
+    },
+    hoverEffect: {
+      desktop: false,
+      mobile: true
     }
   }
 
@@ -79,6 +83,20 @@ export default function Home({ result }) {
             newAnimations = object.desktop; 
         }
         return newAnimations;
+    }
+  }
+
+  const checkHoverEffect = ( object ) => {
+    if (typeof window !== "undefined") {
+      let newWindow;
+      const screenWidth = window.screen.width;
+      if (screenWidth <= 1024) {
+          newWindow = object.mobile;
+      } 
+      if (screenWidth >= 1024) {
+          newWindow = object.desktop
+      }
+      return newWindow;
     }
   }
 
@@ -103,6 +121,7 @@ export default function Home({ result }) {
                 opacityIntro={checkScreenWidth(animations.opacityIntro)}
                 opacityProjects={checkScreenWidth(animations.opacityProjects)}
                 positionProjects={checkScreenWidth(animations.positionProjects)}
+                hover={checkHoverEffect(animations.hoverEffect)}
         ></Layout>
       </div>
 
