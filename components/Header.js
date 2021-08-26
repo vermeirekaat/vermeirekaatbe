@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
 import { motion } from "framer-motion";
 
-export default function Header ({ opacityHeader, positionBackground, opacityCode, scaleCode, moveCode, scaleImage, imageX, imageY, moveText, opacityText }) {
+export default function Header ({ opacityHeader, positionBackground, opacityCode, scaleCode, moveCode, scaleImage, imageX, imageY, moveText, opacityText, dissolveText }) {
 
     return(
         <section className={styles.container}>
@@ -34,10 +34,13 @@ export default function Header ({ opacityHeader, positionBackground, opacityCode
                 </div>
             </motion.div>
 
+        <motion.div
+            style={{ opacity: dissolveText }}
+        >
             <motion.div className={styles.background}
             style={{ y: positionBackground }}>
                 <motion.div className={styles.background_image}
-                style={{ scale: scaleImage, x: imageX, y: imageY}}
+                style={{ scale: scaleImage, x: imageX, y: imageY }}
                 ></motion.div>
                 <motion.h2 className={styles.background_title}
                 style={{ opacity: opacityCode, scale: scaleCode, y: moveCode }}>I have a heart of code</motion.h2> 
@@ -48,6 +51,7 @@ export default function Header ({ opacityHeader, positionBackground, opacityCode
             >
                 <p className={styles.paragraph}>I create digital products that fullfil the user&apos;s needs. <br></br> I am passionate about writing code and learning new approaches within webdevelopment. <br></br> I am interested in the research process behind projects and looking forward to improve my skills.</p>
             </motion.div>
+        </motion.div>
         </section>
     )
 }
