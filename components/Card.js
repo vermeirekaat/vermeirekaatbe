@@ -9,23 +9,25 @@ export default function Card({ card }) {
     return (
         <Link key={card.sys.id} href={`/projects/${card.sys.id}`}>
             <a className={styles.link} 
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
+                
             >
                 <article className={styles.project} key={card.sys.id}
                 >
-                    <div className={styles.project_container}>
+                <div className={styles.project_container}
+                        onMouseEnter={() => setHover(true)}
+                        onMouseLeave={() => setHover(false)}
+                    >
                         {hover === false ? 
                         <> 
                         <motion.h4 className={styles.subtitle}
                             initial={{ opacity: .2 }}
                             animate={{ opacity: 1 }}
-                            transition={{ ease: "easeIn", duration: .5, delay: .2 }}
+                            transition={{ ease: "easeIn", duration: .5 }}
                         >{card.fields.title}</motion.h4> 
                         <motion.div className={styles.tags}
                             initial={{ opacity: .2 }}
                             animate={{ opacity: 1 }}
-                            transition={{ ease: "easeIn", duration: .5, delay: .2 }}
+                            transition={{ ease: "easeIn", duration: .5 }}
                         >
                         {card.fields.tags.map((tag) => (
                             <p className={styles.tag} key={tag.fields.name} style={{ backgroundColor: tag.fields.color}}>{tag.fields.short}</p>
@@ -35,18 +37,24 @@ export default function Card({ card }) {
                         <motion.h4 className={styles.subtitle}
                             initial={{ opacity: 1 }}
                             animate={{ opacity: .2 }}
-                            transition={{ ease: "easeOut", duration: .5, delay: .2 }}
+                            transition={{ ease: "easeOut", duration: .5 }}
                         >{card.fields.title}</motion.h4> 
                         <motion.div className={styles.tags}
                             initial={{ opacity: 1 }}
                             animate={{ opacity: .2 }}
-                            transition={{ ease: "easeOut", duration: .5, delay: .2 }}
+                            transition={{ ease: "easeOut", duration: .5}}
                         >
                         {card.fields.tags.map((tag) => (
                             <p className={styles.tag} key={tag.fields.name} style={{ backgroundColor: tag.fields.color}}>{tag.fields.short}</p>
                         ))}
                     </motion.div> </>}
                 </div>
+                <div className={styles.image_container}>
+                        <div className={styles.image_overlay}></div>
+                        <img className={styles.image_project}
+                            src={"https:" + card.fields.cover.fields.file.url}>
+                        </img>
+                    </div>
                 { hover === true ? 
                     <motion.div className={styles.project_description}
                         initial={{ y: "2vh", opacity: 0 }}
@@ -61,13 +69,6 @@ export default function Card({ card }) {
                     ><p>{card.fields.intro}</p>
                     </motion.div>
                 }
-                    
-                    <div className={styles.image_container}>
-                        <div className={styles.image_overlay}></div>
-                        <img className={styles.image_project}
-                            src={"https:" + card.fields.cover.fields.file.url}>
-                        </img>
-                    </div>
                 </article>
             </a>
         </Link>

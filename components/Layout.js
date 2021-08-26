@@ -22,7 +22,7 @@ export default function Layout({ projects, opacityIntro, opacityProjects, positi
             style={{ opacity: opacityProjects, y: positionProjects }}
             >
                 {projects.map((project) => (
-                    <Card id={project.sys.id} card={project}></Card>
+                    <Card key={project.sys.id} card={project}></Card>
                 ))}
             </motion.div>
         </section>

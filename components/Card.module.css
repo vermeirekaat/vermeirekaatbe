@@ -41,7 +41,7 @@
     transition: .5s ease-in;
 }
 
-.image_container:hover img {
+.project_container:hover + .image_container img {
     transform: scale(1.2);
 }
 
