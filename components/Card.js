@@ -11,11 +11,13 @@ export default function Card({ card, mobile }) {
             <a className={styles.link} >
                 { mobile === true ? 
                 <article className={styles.project} key={card.sys.id}>
-                    <div className={styles.project_container}
-                        style={{ opacity: 1 }}
-                    >
-                        <h4 className={styles.subtitle}>{card.fields.title}</h4> 
-                            <div className={styles.tags}>
+                    <div className={styles.project_container}>
+                        <h4 className={styles.subtitle}
+                            style={{ opacity: 1 }}
+                        >{card.fields.title}</h4> 
+                            <div className={styles.tags}
+                                style={{ opacity: 1 }}
+                            >
                             {card.fields.tags.map((tag) => (
                                 <p className={styles.tag} key={tag.fields.name} style={{ backgroundColor: tag.fields.color}}>{tag.fields.short}</p>
                             ))}
