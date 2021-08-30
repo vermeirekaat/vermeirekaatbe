@@ -1,6 +1,19 @@
 @value values: "../styles/vars.module.css";
 @value breakpointOne, breakpointTwo from values;
 
+@font-face {
+    font-family: 'Noto-Bold';
+    src: url('../public/fonts/notosans-bold.ttf');
+}
+@font-face {
+    font-family: 'Noto-Medium';
+    src: url('../public/fonts/notosans-medium.ttf');
+}
+@font-face {
+    font-family: 'Noto-Light';
+    src: url('../public/fonts/notosans-light.ttf');
+}
+
 .container {
     min-height: 92vh; 
     margin: 2rem;
@@ -40,6 +53,7 @@
 }
 
 .title {
+    font-family: Noto-Bold;
     font-size: 1.5rem;
     margin: .5rem 0;
 }
@@ -51,6 +65,12 @@
     text-transform: uppercase;
 }
 
+.tag {
+    font-family: Noto-Medium;
+    padding: .5rem;
+    border-radius: .7rem;
+}
+
 .content {
     padding: 1rem;
     max-width: 20rem;
@@ -58,7 +78,8 @@
 }
 
 .content_info {
-    font-size: .8rem;
+    font-family: Noto-Light;
+    font-size: 1rem;
     line-height: 150%;
 }
 
@@ -66,7 +87,7 @@
     display: grid; 
     grid-template-columns: repeat(2, 7rem);
     grid-template-rows: auto;
-    font-weight: bold;
+    font-family: Noto-Medium;
     width: 14rem;
     margin: 0 auto;
 }

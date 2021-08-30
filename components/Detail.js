@@ -62,7 +62,7 @@ export default function Detail({ project, videoWidth }) {
 
                     <div className={styles.tags}>
                     {project.tags.map((tag) => (
-                        <p className={styles.tag} key={tag.fields.name}>{tag.fields.short}</p>
+                        <p className={styles.tag} key={tag.fields.name} style={{ backgroundColor: tag.fields.color}}>{tag.fields.short}</p>
                     ))}
                     </div>
                 </div>

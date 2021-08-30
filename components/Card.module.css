@@ -1,6 +1,19 @@
 @value values: "../styles/vars.module.css";
 @value primaryColor, secondaryColor, extraColor, breakpointOne, breakpointTwo from values;
 
+@font-face {
+    font-family: 'Noto-Bold';
+    src: url('../public/fonts/notosans-bold.ttf');
+}
+@font-face {
+    font-family: 'Noto-Medium';
+    src: url('../public/fonts/notosans-medium.ttf');
+}
+@font-face {
+    font-family: 'Noto-Light';
+    src: url('../public/fonts/notosans-light.ttf');
+}
+
 .project {
     display: grid; 
     grid-template-rows: repeat(2, 10rem);
@@ -54,6 +67,8 @@
     grid-column: 1;
     z-index: 2;
     width: calc(100vw/1.5);
+    font-family: Noto-Light;
+    font-size: 1rem;
     line-height: 1.5rem;
     color: white;
     margin: 0 2rem;
@@ -62,6 +77,7 @@
 
 .subtitle {
     margin: 0;
+    font-family: Noto-Bold;
     font-size: 1.5rem;
     color: white;
 }
@@ -69,6 +85,7 @@
 .tags {
     max-width: 10rem;
     display: flex; 
+    font-family: Noto-Medium;
     justify-content: space-between;
     text-transform: uppercase;
     color: white;

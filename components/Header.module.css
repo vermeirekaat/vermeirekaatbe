@@ -1,6 +1,19 @@
 @value values: "../styles/vars.module.css";
 @value primaryColor, extraColor, secondaryColor, breakpointOne, breakpointTwo from values;
 
+@font-face {
+    font-family: 'Noto-Bold';
+    src: url('../public/fonts/notosans-bold.ttf');
+}
+@font-face {
+    font-family: 'Noto-Medium';
+    src: url('../public/fonts/notosans-medium.ttf');
+}
+@font-face {
+    font-family: 'Noto-Light';
+    src: url('../public/fonts/notosans-light.ttf');
+}
+
 .container {
     min-height: 100vh;
     min-width: 100vw;
@@ -16,6 +29,7 @@
 .greeting {
     color: white; 
     text-transform: uppercase;
+    font-family: Noto-Bold;
     font-size: 1.8rem;
     margin: 0;
 }
@@ -33,6 +47,7 @@
     display: flex; 
     flex-direction: column;
     justify-content: flex-end;
+    font-family: Noto-Medium;
     padding-bottom: 1rem;
     grid-column: 2;
     grid-row: 2;
@@ -83,6 +98,7 @@
 .background_title {
     margin: 0;
     color: primaryColor;
+    font-family: Noto-Bold;
     font-size: 2rem;
     text-align: center;
     position: relative; 
@@ -97,6 +113,7 @@
 }
 
 .paragraph {
+    font-family: Noto-Light;
     font-size: 1.2rem;
     color: extraColor; 
     width: 10rem;
@@ -109,6 +126,7 @@
 }
 
 .title {
+    font-family: Noto-Bold;
     font-size: 2.5rem;
     text-transform: uppercase;
     text-align: center;
@@ -116,6 +134,7 @@
 }
 
 .introduction {
+    font-family: Noto-Light;
     font-size: 1.2rem;
     line-height: calc(1.2 * 1.7);
     color: white; 
@@ -128,11 +147,12 @@
 }
 
 .devine button {
+    font-family: Noto-Medium;
     font-size: 1.5rem;
     margin: 2rem 0;
     text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;  
+    text-transform: uppercase;
+    cursor: pointer;  
 }
 
 .gold {

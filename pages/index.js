@@ -115,14 +115,6 @@ export default function Home({ result }) {
       desktop: useTransform(scrollYProgress, [.5, .53], [0, 1]),
       mobile: useTransform(scrollYProgress, [.2, .25], [0, 1])
     },
-    opacityProjects: {
-      desktop: useTransform(scrollYProgress, [.55, .6], [0, 1]),
-      mobile: useTransform(scrollYProgress, [.25, .3], [0, 1])
-    },
-    positionProjects: {
-      desktop: useTransform(scrollYProgress, [.55, .6], [100, 0]),
-      mobile: useTransform(scrollYProgress, [.25, .3], [50, 0])
-    },
     hoverEffect: {
       desktop: false,
       mobile: true
@@ -181,9 +173,7 @@ export default function Home({ result }) {
 
       <div id="projects">
         <Layout projects={results} 
-                opacityProjects={checkScreenWidth(animations.opacityProjects)}
-                positionProjects={checkScreenWidth(animations.positionProjects)}
-                // hover={checkHoverEffect(animations.hoverEffect)}
+                hover={checkHoverEffect(animations.hoverEffect)}
         ></Layout>
       </div>
 

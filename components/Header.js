@@ -1,13 +1,11 @@
 import styles from "./Header.module.css";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";;
 
 export default function Header ({ opacityHeader, positionBackground, opacityCode, scaleCode, moveCode, scaleImage, imageX, imageY, moveText, opacityText, dissolveText, opacityIntro, moveIntro, scaleBlocks, returnFilter }) {
 
     const filterBlocks = e => {
         returnFilter(e.target.value);      
     }
-
 
     return(
         <section className={styles.container}>
