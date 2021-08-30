@@ -138,6 +138,9 @@
     background-color: primaryColor;
     border-radius: .8rem;
     border: .2rem solid white;
+    width: 15rem;
+    display: flex; 
+    justify-content: center;
 }
 
 .orange {
@@ -146,6 +149,9 @@
     background-color: extraColor;
     border-radius: .8rem;
     border: .2rem solid white;
+    width: 15rem;
+    display: flex; 
+    justify-content: center;
 }
 
 .blue {
@@ -154,6 +160,9 @@
     background-color: secondaryColor;
     border-radius: .8rem;
     border: .2rem solid white;
+    width: 15rem;
+    display: flex; 
+    justify-content: center;
 }
 
 @media screen and (min-width: breakpointOne) {
