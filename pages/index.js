@@ -4,11 +4,56 @@ import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import styles from '../styles/Home.module.css';
 import { useTransform, useViewportScroll } from "framer-motion";
+import { useState } from 'react';
 
 const contentful = require("contentful");
 
 export default function Home({ result }) {
   const data = result.items;
+
+  const [results, setResults] = useState(result.items);
+
+  const [filter, setFilter] = useState([]);
+
+  const handleChangeFilter = (tag) => {
+    setFilter(tag);
+    filterResults();
+  }
+
+  const filterResults = () => {
+    const copy = [...data];
+    console.log(copy);
+    const tagsArray = [];
+    copy.map((copy) => tagsArray.push(copy.fields.tags));
+    const index = mapArray(tagsArray);
+
+    const items = findIndex(index);
+
+    const result = [];
+    items.map((index) => result.push(copy[index]));
+    console.log(result);
+
+    setResults(result);
+  }
+
+  const mapArray = (array) => {
+    console.log(filter);
+    const index = [];
+    array.map((item) => {
+      index.push(item.filter((check) => check.fields.name === filter));
+    });
+    return index;
+  }
+
+  const findIndex = (index) => {
+    const items = [];
+    
+    index.map((item) => {
+      if (item.length > 0) {
+        items.push(index.indexOf(item));
+      }});
+    return items;
+  }
 
   const { scrollYProgress } = useViewportScroll();
 
@@ -130,10 +175,11 @@ export default function Home({ result }) {
               opacityIntro={checkScreenWidth(animations.opacityIntro)}
               moveIntro={checkScreenWidth(animations.moveIntro)}
               scaleBlocks={checkScreenWidth(animations.scaleBlocks)}
+              returnFilter={(filter) => handleChangeFilter(filter)}
       ></Header>
 
       <div id="projects">
-        <Layout projects={data} 
+        <Layout projects={results} 
                 opacityProjects={checkScreenWidth(animations.opacityProjects)}
                 positionProjects={checkScreenWidth(animations.positionProjects)}
                 hover={checkHoverEffect(animations.hoverEffect)}

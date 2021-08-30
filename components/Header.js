@@ -1,7 +1,13 @@
 import styles from "./Header.module.css";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
-export default function Header ({ opacityHeader, positionBackground, opacityCode, scaleCode, moveCode, scaleImage, imageX, imageY, moveText, opacityText, dissolveText, opacityIntro, moveIntro, scaleBlocks, }) {
+export default function Header ({ opacityHeader, positionBackground, opacityCode, scaleCode, moveCode, scaleImage, imageX, imageY, moveText, opacityText, dissolveText, opacityIntro, moveIntro, scaleBlocks, returnFilter }) {
+
+    const filterBlocks = e => {
+        returnFilter(e.target.value);      
+    }
+
 
     return(
         <section className={styles.container}>
@@ -60,12 +66,14 @@ export default function Header ({ opacityHeader, positionBackground, opacityCode
                 <p className={styles.introduction}>For the past two years I have gained knowledge of three subjects. Each with a focus on real-life cases and projects. Not all projects are the best but I am proud of everything that I have accomplished Moreover, I am glad that I have learned from my mistakes so that I can improve my skills.</p>
 
                 <div className={styles.devine}>
-                    <motion.p className={styles.blue}
-                    style={{ scale: scaleBlocks }}>Development</motion.p>
-                    <motion.p className={styles.orange}
-                    style={{ scale: scaleBlocks }}>Research</motion.p>
-                    <motion.p className={styles.gold}
-                    style={{ scale: scaleBlocks }}>Design</motion.p>
+                    <motion.button className={styles.blue} value="Development" onClick={(e) => filterBlocks(e)}
+                    style={{ scale: scaleBlocks }}>Development</motion.button>
+                    <motion.button className={styles.orange}
+                    value="Research" onClick={(e) => filterBlocks(e)}
+                    style={{ scale: scaleBlocks }}>Research</motion.button>
+                    <motion.button className={styles.gold}
+                    value="Design" onClick={(e) => filterBlocks(e)}
+                    style={{ scale: scaleBlocks }}>Design</motion.button>
                 </div>    
             </motion.div>
         </section>

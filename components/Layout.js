@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 export default function Layout({ projects, opacityProjects, positionProjects, hover }) {
 
+    console.log(projects);
+
     return(
         <section className={styles.container}>
             <motion.div className={styles.overview}

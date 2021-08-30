@@ -122,14 +122,17 @@
 }
 
 .devine {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.devine button {
     font-size: 1.5rem;
     margin: 2rem 0;
     text-align: center;
     font-weight: bold;
-    text-transform: uppercase;
-    display: flex; 
-    flex-direction: column;
-    align-items: center
+    text-transform: uppercase;  
 }
 
 .gold {
