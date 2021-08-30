@@ -4,21 +4,16 @@ import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import styles from '../styles/Home.module.css';
 import { useTransform, useViewportScroll } from "framer-motion";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const contentful = require("contentful");
 
 export default function Home({ result }) {
   const data = result.items;
 
-  const [results, setResults] = useState(result.items);
+  const [results, setResults] = useState(data);
 
   const [filter, setFilter] = useState([]);
-
-  const handleChangeFilter = (tag) => {
-    setFilter(tag);
-    filterResults();
-  }
 
   const filterResults = () => {
     const copy = [...data];
@@ -54,6 +49,12 @@ export default function Home({ result }) {
       }});
     return items;
   }
+
+    useEffect(() => {
+      if (filter.length > 0) {
+          filterResults();
+      }
+  });
 
   const { scrollYProgress } = useViewportScroll();
 
@@ -175,14 +176,14 @@ export default function Home({ result }) {
               opacityIntro={checkScreenWidth(animations.opacityIntro)}
               moveIntro={checkScreenWidth(animations.moveIntro)}
               scaleBlocks={checkScreenWidth(animations.scaleBlocks)}
-              returnFilter={(filter) => handleChangeFilter(filter)}
+              returnFilter={(filter) => setFilter(filter)}
       ></Header>
 
       <div id="projects">
         <Layout projects={results} 
                 opacityProjects={checkScreenWidth(animations.opacityProjects)}
                 positionProjects={checkScreenWidth(animations.positionProjects)}
-                hover={checkHoverEffect(animations.hoverEffect)}
+                // hover={checkHoverEffect(animations.hoverEffect)}
         ></Layout>
       </div>
 
