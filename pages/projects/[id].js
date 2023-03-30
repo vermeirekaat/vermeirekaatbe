@@ -1,85 +1,85 @@
-import Metadata from "../../components/Metadata";
-import Detail from "../../components/Detail";
+import Metadata from "../../components/Metadata/Metadata";
+import Detail from "../../components/Detail/Detail";
 
 const contentful = require("contentful");
 
 export default function Project({ project }) {
+  const defineVideoScreen = () => {
+    if (typeof window !== "undefined") {
+      const screenWidth = window.screen.width;
+      let videoWidth;
 
-    const defineVideoScreen = () => {
-        if (typeof window !== "undefined") {
-          const screenWidth = window.screen.width;
-          let videoWidth;
-    
-          if (screenWidth <= 640) {
-              videoWidth = 300;
-          }
-          if (screenWidth >= 640) {
-              videoWidth = 550; 
-          }
-          return videoWidth;
-        }
+      if (screenWidth <= 640) {
+        videoWidth = 300;
       }
+      if (screenWidth >= 640) {
+        videoWidth = 550;
+      }
+      return videoWidth;
+    }
+  };
 
   if (!project) {
     return (
+      <div>
         <div>
-            <div>
-                <h2>LOADING...</h2>
-            </div>
+          <h2>LOADING...</h2>
         </div>
-    )
-}
+      </div>
+    );
+  }
 
-    return (
-        <article>
-            <Metadata title={"@vermeirekaat - " + project.fields.title}></Metadata>
+  return (
+    <article>
+      <Metadata title={"@vermeirekaat - " + project.fields.title}></Metadata>
 
-            <Detail project={project.fields} videoWidth={defineVideoScreen()}></Detail>
-        </article>
-    )
+      <Detail
+        project={project.fields}
+        videoWidth={defineVideoScreen()}
+      ></Detail>
+    </article>
+  );
 }
 
 const client = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE,
-    accessToken: process.env.CONTENTFUL_TOKEN
-})
+  space: process.env.CONTENTFUL_SPACE,
+  accessToken: process.env.CONTENTFUL_TOKEN,
+});
 
 export async function getStaticPaths() {
-
   const response = await client.getEntries({ content_type: "project" });
 
   const paths = response.items.map((item) => {
-      return {
-          params: {id: item.sys.id}
-      }
-  })
+    return {
+      params: { id: item.sys.id },
+    };
+  });
 
   return {
-      paths,
-      fallback: false,
-  }
+    paths,
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
-
   const { items } = await client.getEntries({
-      content_type: "project",
-      "sys.id": params.id
+    content_type: "project",
+    "sys.id": params.id,
   });
 
   if (!items.length) {
-      return {
-          redirect: {
-              destination: "/#projects",
-              permanent: false,
-          }
-      }
+    return {
+      redirect: {
+        destination: "/#projects",
+        permanent: false,
+      },
+    };
   }
 
   return {
-      props: {
-          project: items[0],
-      },
-      revalidate: 7,
-  }
-}; 
+    props: {
+      project: items[0],
+    },
+    revalidate: 7,
+  };
+}

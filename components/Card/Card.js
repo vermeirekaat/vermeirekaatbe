@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./Card.module.css"
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 

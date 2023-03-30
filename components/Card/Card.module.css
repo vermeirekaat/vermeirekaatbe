@@ -1,17 +1,17 @@
-@value values: "../styles/vars.module.css";
+@value values: "../../styles/vars.module.css";
 @value primaryColor, secondaryColor, extraColor, breakpointOne, breakpointTwo from values;
 
 @font-face {
     font-family: 'Noto-Bold';
-    src: url('../public/fonts/notosans-bold.ttf');
+    src: url('/public/fonts/notosans-bold.ttf');
 }
 @font-face {
     font-family: 'Noto-Medium';
-    src: url('../public/fonts/notosans-medium.ttf');
+    src: url('/public/fonts/notosans-medium.ttf');
 }
 @font-face {
     font-family: 'Noto-Light';
-    src: url('../public/fonts/notosans-light.ttf');
+    src: url('/public/fonts/notosans-light.ttf');
 }
 
 .project {
