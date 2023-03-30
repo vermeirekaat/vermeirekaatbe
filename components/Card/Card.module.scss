@@ -1,5 +1,4 @@
-@value values: "../../styles/vars.module.css";
-@value primaryColor, secondaryColor, extraColor, breakpointOne, breakpointTwo from values;
+@import '/styles/variables';
 
 @font-face {
     font-family: 'Noto-Bold';
@@ -70,7 +69,7 @@
     font-family: Noto-Light;
     font-size: 1rem;
     line-height: 1.5rem;
-    color: white;
+    color: $white;
     margin: 0 2rem;
     align-self: flex-end;
 }
@@ -79,7 +78,7 @@
     margin: 0;
     font-family: Noto-Bold;
     font-size: 1.5rem;
-    color: white;
+    color: $white;
 }
 
 .tags {
@@ -88,7 +87,7 @@
     font-family: Noto-Medium;
     justify-content: space-between;
     text-transform: uppercase;
-    color: white;
+    color: $white;
 }
 
 .tag {
@@ -96,7 +95,7 @@
     border-radius: .7rem;
 }
 
-@media screen and (min-width: breakpointOne) {
+@media screen and (min-width: $breakpoint-small) {
     .image_container {
         width: calc(100vw/2);
     }
@@ -114,7 +113,7 @@
     }
 }
 
-@media screen and (min-width: breakpointTwo) {
+@media screen and (min-width: $breakpoint-medium) {
     .image_container {
         width: calc(100vw/4);
     }

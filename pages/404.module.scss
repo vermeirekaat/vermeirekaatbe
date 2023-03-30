@@ -1,5 +1,4 @@
-@value values: "../styles/vars.module.css";
-@value primaryColor, breakpointOne from values;
+@import 'styles/variables';
 
 .glitch_container {
     width: 100vw; 
@@ -15,7 +14,7 @@
     font-family: sans-serif;
 	font-weight: bold;
     text-align: center;
-	color: primaryColor;
+	color: $primary-color;
 	font-size: 5rem;
 	animation: glitch 2s steps(100) infinite;
 

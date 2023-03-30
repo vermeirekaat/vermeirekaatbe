@@ -1,8 +1,7 @@
-@value values: "../../styles/vars.module.css";
-@value primaryColor, secondaryColor, extraColor, breakpointOne, breakpointTwo from values;
+@import '/styles/variables';
 
 .container {
-    background-color: black;
+    background-color: black; 
 }
 
 .overview {
@@ -10,7 +9,7 @@
     width: 100vw;
 }
 
-@media screen and (min-width: breakpointOne) {
+@media screen and (min-width: $breakpoint-small) {
     .container {
         padding-top: 10vh;
     }
@@ -22,7 +21,7 @@
     }
 }
 
-@media screen and (min-width: breakpointTwo) {
+@media screen and (min-width: $breakpoint-medium) {
     .overview {
         display: grid; 
         grid-template-columns: repeat(4, calc(100vw/4));

@@ -1,6 +1,5 @@
-import styles from "./Layout.module.css";
+import styles from "./Layout.module.scss";
 import Card from "../Card/Card.js";
-import { motion } from "framer-motion";
 
 export default function Layout({ projects, hover }) {
   return (

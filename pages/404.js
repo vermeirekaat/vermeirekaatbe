@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import styles from "../styles/404.module.css";
+import styles from "./404.module.scss";
 
 export default function NotFound () {
 
@@ -14,7 +14,7 @@ export default function NotFound () {
 
   return (
     <div className={styles.glitch_container}>
-        <p className={styles.glitch}>REDIRECT</p>
+        <p className={styles.glitch}>Page not found</p>
         <div className={styles.background}></div>
     </div>
   )

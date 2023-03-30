@@ -1,5 +1,4 @@
-@value values: "../../styles/vars.module.css";
-@value breakpointOne, breakpointTwo from values;
+@import '/styles/variables';
 
 @font-face {
     font-family: 'Noto-Bold';
@@ -17,8 +16,8 @@
 .container {
     min-height: 92vh; 
     margin: 2rem;
-    background-color: black;
-    color: white;
+    background-color: $dark;
+    color: $white;
 }
 
 .middle {
@@ -102,7 +101,7 @@
     margin-top: 1rem;
 }
 
-@media screen and (min-width: breakpointOne) {
+@media screen and (min-width: $breakpoint-small) {
     .header {
         max-width: 40rem;
     }
