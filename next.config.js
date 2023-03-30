@@ -1,3 +1,5 @@
+const withFonts = require('nextjs-fonts');
+
 module.exports = {
 
   env: {
@@ -11,4 +13,6 @@ module.exports = {
   images: {
       domains: [process.env.IMAGES_DOMAIN],
   },
+
+  fonts: withFonts()
 }

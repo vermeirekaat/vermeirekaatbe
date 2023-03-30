@@ -1,17 +1,5 @@
 @import '/styles/variables';
-
-@font-face {
-    font-family: 'Noto-Bold';
-    src: url('/public/fonts/notosans-bold.ttf');
-}
-@font-face {
-    font-family: 'Noto-Medium';
-    src: url('/public/fonts/notosans-medium.ttf');
-}
-@font-face {
-    font-family: 'Noto-Light';
-    src: url('/public/fonts/notosans-light.ttf');
-}
+@import '/styles/fonts';
 
 .project {
     display: grid; 
