@@ -1,6 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
-import styles from "./Footer.module.scss";
+import Link from "next/link"
+import Image from "next/image"
+
+import styles from "./Footer.module.scss"
 
 export default function Footer() {
     return (
@@ -39,8 +40,7 @@ export default function Footer() {
                                 height={30}
                             />   
                         </a></Link>
-                    </div>
-                    
+                    </div>     
                 </div>
             </div>
         </footer>

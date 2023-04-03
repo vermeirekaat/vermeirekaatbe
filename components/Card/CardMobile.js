@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import styles from "./Card.module.scss"
 import Tag from "../Tag/Tag"
 
-export default function CardMobile ({ card }) {
+export default function CardMobile({ card }) {
     return (
         <article className={styles.project} key={card.sys.id}>
             <div className={styles.project_container}>

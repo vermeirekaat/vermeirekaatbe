@@ -1,11 +1,11 @@
-import Image from "next/image";
-import ReactPlayer from "react-player";
-import { useState } from "react";
+import Image from "next/image"
+import ReactPlayer from "react-player"
+import { useState } from "react"
 
-import styles from "./Detail.module.scss";
+import styles from "./Detail.module.scss"
 
 export default function DetailVideo({ url, alt, videoWidth}) {
-    const [muteVideo, setMuteVideo] = useState(true);
+    const [muteVideo, setMuteVideo] = useState(true)
 
     const sound = {
         off: {
@@ -22,12 +22,12 @@ export default function DetailVideo({ url, alt, videoWidth}) {
         let svg;
         let alt;
         if (muteVideo === true) {
-            svg = sound.on.svg; 
-            alt = sound.on.alt;
+            svg = sound.on.svg
+            alt = sound.on.alt
         }
         if (muteVideo === false) {
-            svg = sound.off.svg;
-            alt = sound.off.alt;
+            svg = sound.off.svg
+            alt = sound.off.alt
         }
         return (
             <Image

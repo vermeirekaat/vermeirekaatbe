@@ -1,6 +1,6 @@
-import styles from "./Header.module.scss";
+import { motion } from "framer-motion"
 
-import { motion } from "framer-motion";;
+import styles from "./Header.module.scss"
 
 export default function Header ({ opacityHeader, positionBackground, opacityCode, scaleCode, moveCode, scaleImage, imageX, imageY, moveText, opacityText, dissolveText, opacityIntro, moveIntro, scaleBlocks, returnFilter }) {
 

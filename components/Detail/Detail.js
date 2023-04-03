@@ -1,12 +1,11 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 
-import styles from "./Detail.module.scss";
-import DetailClose from "./DetailClose";
-import DetailContent from "./DetailContent";
-import DetailHeader from "./DetailHeader";
+import styles from "./Detail.module.scss"
+import DetailClose from "./DetailClose"
+import DetailContent from "./DetailContent"
+import DetailHeader from "./DetailHeader"
 
 export default function Detail({ project, videoWidth }) {
-
     return(
         <motion.article className={styles.container}
             initial={{ y: "10rem", opacity: 0 }}

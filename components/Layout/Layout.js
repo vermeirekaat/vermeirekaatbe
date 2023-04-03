@@ -1,5 +1,5 @@
-import styles from "./Layout.module.scss";
-import Card from "../Card/Card.js";
+import styles from "./Layout.module.scss"
+import Card from "../Card/Card.js"
 
 export default function Layout({ projects, hover }) {
   return (

@@ -1,4 +1,4 @@
-import styles from "./Detail.module.scss";
+import styles from "./Detail.module.scss"
 
 export default function DetailContent({description, tools}) {
     return (
