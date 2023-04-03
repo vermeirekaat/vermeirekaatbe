@@ -3,7 +3,7 @@ import { motion, useTransform } from "framer-motion"
 import { checkScreenWidth } from "../../../helpers/animations"
 import styles from '../Header.module.scss'
 
-export default function Projects({ scroll, returnFilter }) {
+export default function Projects({ scroll, tags, returnFilter }) {
     const animations = {
         opacityIntro: {
             desktop: useTransform(scroll, [0.45, 0.5], [0, 1]),
@@ -19,6 +19,8 @@ export default function Projects({ scroll, returnFilter }) {
         }
     }
 
+    console.log(tags)
+
     const filterBlocks = e => {
         returnFilter(e.target.value);      
     }
@@ -31,31 +33,19 @@ export default function Projects({ scroll, returnFilter }) {
             }}
         >
             <h3 className={styles.title}>Projects</h3>
-            <p className={styles.introduction}>For the past two years I have gained knowledge of three subjects. Each with a focus on real-life cases and projects. Not all projects are the best but I am proud of everything that I have accomplished Moreover, I am glad that I have learned from my mistakes so that I can improve my skills.</p>
+            <p className={styles.introduction}>For the past two years I have gained knowledge of three subjects. Each with a focus on real-life cases and projects. Not all projects are the best but I am proud of everything that I have accomplished. Moreover, I am glad that I have learned from my mistakes so that I can improve my skills.</p>
 
             <div className={styles.devine}>
-                <motion.button className={styles.blue} 
-                    style={{ scale: checkScreenWidth(animations.scaleBlocks) }}
-                    value="Development" 
-                    onClick={(e) => filterBlocks(e)}
-                >
-                    Development
-                </motion.button>
-                <motion.button className={styles.orange}
-                    style={{ scale: checkScreenWidth(animations.scaleBlocks) }}
-                    value="Research" 
-                    onClick={(e) => filterBlocks(e)}
-                >
-                    Research
-                </motion.button>
-                <motion.button className={styles.gold}
-                    style={{ scale: checkScreenWidth(animations.scaleBlocks) }}
-                    value="Design" 
-                    onClick={(e) => filterBlocks(e)}
-                >
-                    Design
-                </motion.button>
+                { tags.map((tag) => (
+                    <motion.button className={styles.filter__button} key={tag.sys.id} 
+                        style={{ scale: checkScreenWidth(animations.scaleBlocks), backgroundColor: tag.fields.color }}
+                        value={tag.fields.name} 
+                        onClick={(e) => filterBlocks(e)}
+                    >
+                        {tag.fields.name}
+                    </motion.button>
+                ))}
             </div>    
-    </motion.div>
+        </motion.div>
     )
 }

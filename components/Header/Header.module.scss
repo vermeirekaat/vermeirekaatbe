@@ -82,6 +82,7 @@
     height: 20rem;
     margin: 0 auto;
 }
+
 .background_title {
     margin: 0;
     color: $primary-color;
@@ -142,32 +143,9 @@
     cursor: pointer;  
 }
 
-.gold {
+.filter__button {
     color: white;
     padding: .5rem 2rem;
-    background-color: $primary-color;
-    border-radius: .8rem;
-    border: .2rem solid white;
-    width: 15rem;
-    display: flex; 
-    justify-content: center;
-}
-
-.orange {
-    color: white;
-    padding: .5rem 2rem;
-    background-color: $extra-color;
-    border-radius: .8rem;
-    border: .2rem solid white;
-    width: 15rem;
-    display: flex; 
-    justify-content: center;
-}
-
-.blue {
-    color: white;
-    padding: .5rem 2rem;
-    background-color: $secondary-color;
     border-radius: .8rem;
     border: .2rem solid white;
     width: 15rem;

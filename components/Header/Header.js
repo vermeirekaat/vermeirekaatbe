@@ -5,14 +5,14 @@ import Profile from "./children/Profile"
 import Intro from "./children/Intro"
 import Projects from "./children/Projects"
 
-export default function Header ({ handleFilter }) {
+export default function Header ({ tags, handleFilter }) {
     const { scrollYProgress } = useViewportScroll();
 
     return(
         <section className={styles.container}>
             <Profile scroll={scrollYProgress}/>
             <Intro scroll={scrollYProgress}/>
-            <Projects scroll={scrollYProgress} returnFilter={(e) => handleFilter(e)}/>
+            <Projects scroll={scrollYProgress} tags={tags} returnFilter={(e) => handleFilter(e)}/>
         </section>
     )
 }
