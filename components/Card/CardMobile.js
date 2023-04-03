@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 
 import styles from "./Card.module.scss"
+import Tag from "../Tag/Tag"
 
 export default function CardMobile ({ card }) {
     return (
@@ -16,13 +17,12 @@ export default function CardMobile ({ card }) {
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
                 >
-                    { card.fields.tags.map((tag) => (
-                        <p className={styles.tag} 
-                            key={tag.fields.name} 
-                            style={{ backgroundColor: tag.fields.color}}
-                        >
-                            {tag.fields.short}
-                        </p>
+                    {card.fields.tags.map((tag) => (
+                        <Tag 
+                            key={tag.fields.name}
+                            color={tag.fields.color} 
+                            name={tag.fields.short}
+                        />
                     ))}
                 </motion.div> 
             </div>

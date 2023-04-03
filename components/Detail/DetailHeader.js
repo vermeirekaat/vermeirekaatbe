@@ -30,7 +30,7 @@ export default function DetailHeader({ project, videoWidth }) {
                 <div className={styles.tags}>
                         {project.tags.map((tag) => (
                             <Tag 
-                                key={tag.fields.name} 
+                                key={tag.fields.name}
                                 color={tag.fields.color} 
                                 name={tag.fields.short}
                             />
