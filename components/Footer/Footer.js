@@ -4,11 +4,15 @@ import Image from "next/image"
 import styles from "./Footer.module.scss"
 
 export default function Footer() {
+    const getYear = () => {
+        return new Date().getFullYear()
+    }
+
     return (
         <footer className={styles.container}>
             <div className={styles.footer}>
                 <div className={styles.content}>
-                    <p className={styles.paragraph}>© vermeirekaat - 2021</p>
+                    <p className={styles.paragraph}>© vermeirekaat - { getYear() }</p>
                 </div>
                 <div className={styles.socials}>
                     <div className={styles.link}>

@@ -10,7 +10,7 @@ export default function Header ({ handleFilter }) {
 
     return(
         <section className={styles.container}>
-            <Profile scroll={scrollYProgress} />
+            <Profile scroll={scrollYProgress}/>
             <Intro scroll={scrollYProgress}/>
             <Projects scroll={scrollYProgress} returnFilter={(e) => handleFilter(e)}/>
         </section>
