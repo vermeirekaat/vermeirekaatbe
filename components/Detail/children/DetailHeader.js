@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import DetailVideo from "./DetailVideo";
 import styles from "../Detail.module.scss";
-import Tag from "../Tag/Tag";
+import Tag from "../../Tag/Tag";
 
 export default function DetailHeader({ project, videoWidth }) {
     return (
