@@ -1,5 +1,7 @@
+@import '/styles/variables';
+
 .container {
-    background-color: black;
+    background-color: $dark;
     width: 100vw;
     padding-top: 5rem;
 }
