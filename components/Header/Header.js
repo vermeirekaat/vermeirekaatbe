@@ -74,7 +74,7 @@ export default function Header ({ opacityHeader, positionBackground, opacityCode
                     value="Design" onClick={(e) => filterBlocks(e)}
                     style={{ scale: scaleBlocks }}>Design</motion.button>
                 </div>    
-            </motion.div>
+        </motion.div>
         </section>
     )
 }

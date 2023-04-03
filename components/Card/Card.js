@@ -1,8 +1,8 @@
 import Link from "next/link"
 
 import styles from "./Card.module.scss"
-import CardMobile from "./CardMobile"
-import CardDesktop from "./CardDesktop"
+import CardMobile from "./children/CardMobile"
+import CardDesktop from "./children/CardDesktop"
 
 export default function Card({ card, mobile }) {
     return (

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 
-import styles from "./Card.module.scss"
-import Tag from "../Tag/Tag"
+import styles from "../Card.module.scss"
+import Tag from "../../Tag/Tag"
 
 export default function CardDesktop({ card }) {
     return (

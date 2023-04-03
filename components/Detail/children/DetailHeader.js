@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "./Detail.module.scss";
 import DetailVideo from "./DetailVideo";
+import styles from "../Detail.module.scss";
 import Tag from "../Tag/Tag";
 
 export default function DetailHeader({ project, videoWidth }) {

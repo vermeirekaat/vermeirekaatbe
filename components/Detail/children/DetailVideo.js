@@ -2,7 +2,7 @@ import Image from "next/image"
 import ReactPlayer from "react-player"
 import { useState } from "react"
 
-import styles from "./Detail.module.scss"
+import styles from "../Detail.module.scss"
 
 export default function DetailVideo({ url, alt, videoWidth}) {
     const [muteVideo, setMuteVideo] = useState(true)

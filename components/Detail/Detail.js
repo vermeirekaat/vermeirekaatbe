@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
 
 import styles from "./Detail.module.scss"
-import DetailClose from "./DetailClose"
-import DetailContent from "./DetailContent"
-import DetailHeader from "./DetailHeader"
+import DetailClose from "./children/DetailClose"
+import DetailContent from "./children/DetailContent"
+import DetailHeader from "./children/DetailHeader"
 
 export default function Detail({ project, videoWidth }) {
     return(

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 
-import styles from "./Detail.module.scss"
+import styles from "../Detail.module.scss"
 
 export default function DetailClose() {
     return (
