@@ -13,7 +13,7 @@ export default function Detail({ project, videoWidth }) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
     >
-      <div className={styles.middle}>
+      <div className={styles.detail}>
         <DetailClose />
         <DetailHeader project={project} videoWidth={videoWidth} />
         <DetailContent

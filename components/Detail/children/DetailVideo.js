@@ -33,8 +33,8 @@ export default function DetailVideo({ url, alt, videoWidth }) {
   };
 
   return (
-    <div className={styles.video}>
-      <div className={styles.video_file}>
+    <div className={styles.detail__video}>
+      <div className={styles.detail__video_file}>
         <ReactPlayer
           url={"https:" + url}
           width={videoWidth}
@@ -46,7 +46,7 @@ export default function DetailVideo({ url, alt, videoWidth }) {
         />
       </div>
 
-      <div className={styles.sound} onClick={() => setMuteVideo(!muteVideo)}>
+      <div className={styles.detail__sound} onClick={() => setMuteVideo(!muteVideo)}>
         {checkSound()}
       </div>
     </div>

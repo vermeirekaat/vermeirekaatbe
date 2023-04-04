@@ -6,7 +6,7 @@ import styles from "../Detail.module.scss";
 export default function DetailClose() {
   return (
     <Link href="/#projects">
-      <a className={styles.cross}>
+      <a className={styles.detail__close}>
         <Image
           src="/assets/cross-icon.svg"
           alt="cross-icon"

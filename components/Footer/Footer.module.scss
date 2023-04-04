@@ -2,8 +2,11 @@
 
 .container {
   width: 100vw;
-  padding-top: 5rem;
   background-color: $dark;
+
+  @media screen and (min-width: $breakpoint-small) {
+    padding-top: 2.5rem;
+  }
 }
 
 .footer {
@@ -19,7 +22,7 @@
 }
 
 .paragraph {
-  color: white;
+  color: $white;
 }
 
 .socials { 

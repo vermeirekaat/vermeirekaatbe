@@ -7,13 +7,13 @@ import Tag from "../../Tag/Tag";
 
 export default function DetailHeader({ project, videoWidth }) {
   return (
-    <section className={styles.header}>
-      <div className={styles.information}>
-        <div className={styles.information_title}>
-          <h1 className={styles.title}>{project.title}</h1>
+    <section className={styles.detail_header}>
+      <div className={styles.detail_header__info}>
+        <div className={styles.detail_header__info_container}>
+          <h1 className={styles.detail_header__info_title}>{project.title}</h1>
           {project.link && (
             <Link href={project.link} passHref={true}>
-              <a className={styles.link} target="_blank">
+              <a className={styles.detail__header_link} target="_blank">
                 <Image
                   src="/assets/external-link.svg"
                   alt="external-link-icon"
@@ -25,7 +25,7 @@ export default function DetailHeader({ project, videoWidth }) {
           )}
         </div>
 
-        <div className={styles.tags}>
+        <div className={styles.detail__tags}>
           {project.tags.map((tag) => (
             <Tag
               key={tag.fields.name}
