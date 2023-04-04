@@ -12,10 +12,6 @@
   width: 20rem;
   margin: 0 auto;
 
-  @media screen and (min-width: $breakpoint-small) {
-    width: 40rem;
-  }
-
   &__close {
     display: flex; 
     flex-direction: row; 
@@ -68,6 +64,10 @@
       max-width: 10rem;
     }
   }
+
+  @media screen and (min-width: $breakpoint-small) {
+    width: 40rem;
+  }
 }
 
 .detail__header {
@@ -75,13 +75,6 @@
   padding: 1rem;
 
   max-width: 20rem;
-
-  @media screen and (min-width: $breakpoint-small) {
-    display: flex; 
-    flex-direction: column-reverse;
-
-    max-width: 40rem;
-  }
 
   &__info {
     display: flex; 
@@ -106,6 +99,13 @@
     margin: .5rem 0;
     font-family: $font-bold;
     font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: $breakpoint-small) {
+    display: flex; 
+    flex-direction: column-reverse;
+
+    max-width: 40rem;
   }
 }
 
