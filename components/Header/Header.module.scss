@@ -1,226 +1,226 @@
 @import '/styles/variables';
 
 .container {
-    background-color: $dark;
+  background-color: $dark;
 
-    min-height: 100vh;
-    min-width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .header {
-    width: 20rem; 
-    margin: 0 auto;
-    padding-top: 25vh;
+  width: 20rem; 
+  margin: 0 auto;
+  padding-top: 25vh;
 }
 
 .greeting {
-    margin: 0;
+  margin: 0;
 
-    font-family: $font-bold;
-    font-size: 1.8rem; 
-    text-transform: uppercase;
-    color: white;
+  font-family: $font-bold;
+  font-size: 1.8rem; 
+  text-transform: uppercase;
+  color: $white;
 }
 
 .profile {
-    display: grid;
-    grid-template-rows: 7rem 7rem 2rem; 
-    grid-template-columns: 8rem 12rem;
+  display: grid;
+  grid-template-rows: 7rem 7rem 2rem; 
+  grid-template-columns: 8rem 12rem;
 
-    width: 20rem;
-    margin-top: 5rem;
+  width: 20rem;
+  margin-top: 5rem;
 
-    color: white;
+  color: $white;
 }
 
 .profile_info {
-    z-index: 2;
+  z-index: 2;
 
-    display: flex; 
-    flex-direction: column;
-    justify-content: flex-end;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-end;
 
-    padding-bottom: 1rem;
-    grid-row: 2;
-    grid-column: 2;
+  padding-bottom: 1rem;
+  grid-row: 2;
+  grid-column: 2;
 
-    font-family: $font-secondary;
+  font-family: $font-secondary;
 }
 
 .profile_intro {
-    margin: 0;
-    font-size: 1.5rem;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .profile_name {
-    margin: 0;
-    font-size: 1.8rem;
-    font-weight: bold;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .profile_image {
-    grid-row: 1 / span 3;
-    grid-column: 1 / span 2;
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 2;
 }
 
 .image {
-    width: 14rem; 
-    height: 14rem;
+  width: 14rem; 
+  height: 14rem;
 
-    background-image: url('/assets/kaat.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('/assets/kaat.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .tagline {
-    font-size: .8rem; 
-    font-weight: lighter;
+  font-size: .8rem; 
+  font-weight: lighter;
 }
 
 .background {
-    padding-top: 40vh;
+  padding-top: 40vh;
 }
 
 .background_image {
-    width: 10rem; 
-    height: 20rem;
-    margin: 0 auto;
+  width: 10rem; 
+  height: 20rem;
+  margin: 0 auto;
 
-    background-image: url('/assets/heart-code.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-image: url('/assets/heart-code.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .background_title {
-    position: relative; 
-    top: -13rem;
+  position: relative; 
+  top: -13rem;
 
-    margin: 0;
+  margin: 0;
 
-    font-family: $font-bold;
-    font-size: 2rem;
-    text-align: center;
-    color: $primary-color;
+  font-family: $font-bold;
+  font-size: 2rem;
+  text-align: center;
+  color: $primary-color;
 }
 
 .info {
-    display: flex; 
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: 0 10vw;
+  display: flex; 
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0 10vw;
 }
 
 .paragraph { 
-    width: 10rem;
-    font-family: $font-primary;
-    font-size: 1.2rem;
-    color: $extra-color;
+  width: 10rem;
+  font-family: $font-primary;
+  font-size: 1.2rem;
+  color: $extra-color;
 }
 
 .intro {
-    margin: 0 auto;
-    padding: 2rem;
+  margin: 0 auto;
+  padding: 2rem;
 
-    max-width: 55rem;
+  max-width: 55rem;
 }
 
 .title {
-    font-family: $font-bold;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
+  font-family: $font-bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
 }
 
 .introduction {
-    font-family: $font-primary;
-    font-size: 1.2rem;
-    line-height: calc(1.2 * 1.7);
-    color: white; 
+  font-family: $font-primary;
+  font-size: 1.2rem;
+  line-height: calc(1.2 * 1.7);
+  color: $white; 
 }
 
 .devine {
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
 }
 
 .devine button {
-    margin: 2rem 0;
+  margin: 2rem 0;
 
-    font-family: $font-secondary;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-align: center;
+  font-family: $font-secondary;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
 
-    cursor: pointer;  
+  cursor: pointer;  
 }
 
 .filter__button {
-    display: flex; 
-    justify-content: center;
+  display: flex; 
+  justify-content: center;
 
-    width: 15rem;
-    padding: .5rem 2rem;
+  width: 15rem;
+  padding: .5rem 2rem;
 
-    color: white;
+  color: $white;
 
-    border: .2rem solid white;
-    border-radius: .8rem;
+  border: .2rem solid $white;
+  border-radius: .8rem;
 }
 
 @media screen and (min-width: $breakpoint-small) {
-    .header {
-        width: 40rem;
-        margin: 0 auto;
-    }
+  .header {
+    width: 40rem;
+    margin: 0 auto;
+  }
 
-    .profile {
-        grid-template-rows: 7rem 13rem 2rem;
-        grid-template-columns: 18rem 22rem;
-    }
+  .profile {
+    grid-template-rows: 7rem 13rem 2rem;
+    grid-template-columns: 18rem 22rem;
+  }
 
-    .image {
-        width: 20rem;
-        height: 20rem;
-    }
+  .image {
+    width: 20rem;
+    height: 20rem;
+  }
 
-    .profile_intro {
-        font-size: 1.8rem;
-    }
+  .profile_intro {
+    font-size: 1.8rem;
+  }
 
-    .profile_name {
-        font-size: 2.5rem;
-    }
+  .profile_name {
+    font-size: 2.5rem;
+  }
 
-    .background {
-        padding-top: 20vh;
-    }
+  .background {
+    padding-top: 20vh;
+  }
 
-    .background_image {
-        width: 20rem;
-        height: 30rem;
-    }
+  .background_image {
+    width: 20rem;
+    height: 30rem;
+  }
 
-    .background_title {
-        top: -18rem;
-        font-size: 5rem;
-    }
+  .background_title {
+    top: -18rem;
+    font-size: 5rem;
+  }
 
-    .info {
-        margin: 0 20vw;
-    }
+  .info {
+    margin: 0 20vw;
+  }
 
-    .paragraph {
-        width: 40rem;
-        margin-left: 10rem;
-        font-size: 1.5rem;
-    }
+  .paragraph {
+    width: 40rem;
+    margin-left: 10rem;
+    font-size: 1.5rem;
+  }
 
-    .devine {
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-top: 5rem;
-        margin-bottom: 10rem; 
-    }
+  .devine {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+    margin-bottom: 10rem; 
+  }
 }

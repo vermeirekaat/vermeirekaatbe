@@ -1,133 +1,130 @@
 @import '/styles/variables';
 
 .container { 
-    margin: 2rem;
-    color: $white;
-    background-color: $dark;
+  margin: 2rem;
+  color: $white;
+  background-color: $dark;
 
-    min-height: 92vh;
+  min-height: 92vh;
 }
 
 .middle {
-    width: 20rem;
-    margin: 0 auto;
+  width: 20rem;
+  margin: 0 auto;
 }
 
 .cross {
-    display: flex; 
-    flex-direction: row; 
-    justify-content: flex-end;
-    padding: 1rem;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-end;
+  padding: 1rem;
 }
 
 .header {
-    margin: 0 auto;
-    padding: 1rem;
+  margin: 0 auto;
+  padding: 1rem;
 
-    max-width: 20rem;
+  max-width: 20rem;
 }
 
 .information {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-around;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-around;
 }
 
 .information_title {
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
-    margin: .5rem 0;
-    font-family: $font-bold;
-    font-size: 1.5rem;
+  margin: .5rem 0;
+  font-family: $font-bold;
+  font-size: 1.5rem;
 }
 
 .tags {
-    display: flex; 
-    justify-content: space-between;
-    width: 50vw;
-    text-transform: uppercase;
+  display: flex; 
+  justify-content: space-between;
+  width: 50vw;
+  text-transform: uppercase;
 }
 
 .content {
-    margin: 0 auto;
-    padding: 1rem;
+  margin: 0 auto;
+  padding: 1rem;
 
-    max-width: 20rem;
+  max-width: 20rem;
 }
 
 .content_info {
-    font-family: $font-primary;
-    font-size: 1rem;
-    line-height: 150%;
+  font-family: $font-primary;
+  font-size: 1rem;
+  line-height: 150%;
 }
 
 .tools {
-    display: grid;
-    grid-template-rows: auto; 
-    grid-template-columns: repeat(2, 7rem);
+  display: grid;
+  grid-template-rows: auto; 
+  grid-template-columns: repeat(2, 7rem);
 
-    width: 14rem;
-    margin: 0 auto;
+  width: 14rem;
+  margin: 0 auto;
 
-    font-family: $font-secondary;
+  font-family: $font-secondary;
 }
 
 .video {
-    display: flex; 
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .sound {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: $breakpoint-small) {
-    .header {
-        max-width: 40rem;
-    }
+  .header {
+		display: flex; 
+    flex-direction: column-reverse;
 
-    .middle {
-        width: 40rem;
-    }
+    max-width: 40rem;
+  }
 
-    .information {
-        margin: 1.5rem .5rem;
+  .middle {
+    width: 40rem;
+  }
 
-        max-width: 20rem;
-    }
+  .information {
+    margin: 1.5rem .5rem;
 
-    .tags {
-        max-width: 10rem;
-    }
+    max-width: 20rem;
+  }
 
-    .header {
-        display: flex; 
-        flex-direction: column-reverse;
-    }
+  .tags {
+    max-width: 10rem;
+  }
 
-    .content {
-        padding: 1.5rem;
+  .content {
+    padding: 1.5rem;
 
-        max-width: 40rem;
-    }
+    max-width: 40rem;
+  }
 
-    .tools {
-        grid-template-columns: repeat(4, 7rem);
-        width: 30rem;
-    }
+  .tools {
+    grid-template-columns: repeat(4, 7rem);
+    width: 30rem;
+  }
 
-    .video {
-        max-width: 40rem;
-    }
+  .video {
+    max-width: 40rem;
+  }
 
-    .video_file {
-        max-width: 40rem;
-    }
-    
+  .video_file {
+    max-width: 40rem;
+  } 
 }

@@ -397,7 +397,7 @@ module.exports = {
     "color-named": "always-where-possible",
     "color-no-invalid-hex": true,
     "comment-no-empty": true,
-    "declaration-bang-space-before": "always",
+    // "declaration-bang-space-before": "always",
     "declaration-block-no-duplicate-properties": [
       true,
       {
@@ -447,7 +447,7 @@ module.exports = {
     "selector-pseudo-class-no-unknown": true,
     "selector-pseudo-element-no-unknown": true,
     "selector-type-no-unknown": true,
-    "string-quotes": "single",
+    // "string-quotes": "single",
     "string-no-newline": true,
     "unit-allowed-list": ["%", "deg", "px", "rem", "vw", "vh", "s"],
     "unit-no-unknown": true,
