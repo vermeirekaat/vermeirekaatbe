@@ -1,5 +1,4 @@
 @import '/styles/variables';
-@import '/styles/fonts';
 
 .container { 
     margin: 2rem;
@@ -43,7 +42,7 @@
 
 .title {
     margin: .5rem 0;
-    font-family: Noto-Bold, Arial, Helvetica, sans-serif;
+    font-family: $font-bold;
     font-size: 1.5rem;
 }
 
@@ -62,7 +61,7 @@
 }
 
 .content_info {
-    font-family: Noto-Light, Arial, Helvetica, sans-serif;
+    font-family: $font-primary;
     font-size: 1rem;
     line-height: 150%;
 }
@@ -75,7 +74,7 @@
     width: 14rem;
     margin: 0 auto;
 
-    font-family: Noto-Medium, Arial, Helvetica, sans-serif;
+    font-family: $font-secondary;
 }
 
 .video {
