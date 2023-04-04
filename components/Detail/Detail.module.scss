@@ -115,7 +115,7 @@
   align-items: flex-end;
 
   &_file {
-    @media screen and (min-width: $brekapoint-small) {
+    @media screen and (min-width: $breakpoint-small) {
       max-width: 40rem;
     }
   }
