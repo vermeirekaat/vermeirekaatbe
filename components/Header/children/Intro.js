@@ -54,13 +54,13 @@ export default function Intro({ scroll }) {
       }}
     >
       <motion.div
-        className={styles.background}
+        className={styles.intro}
         style={{
           y: checkScreenWidth(animations.positionBackground),
         }}
       >
         <motion.div
-          className={styles.background_image}
+          className={styles.intro__image}
           style={{
             scale: checkScreenWidth(animations.scaleImage),
             x: checkScreenWidth(animations.imageX),
@@ -68,7 +68,7 @@ export default function Intro({ scroll }) {
           }}
         ></motion.div>
         <motion.h2
-          className={styles.background_title}
+          className={styles.intro__title}
           style={{
             opacity: checkScreenWidth(animations.opacityCode),
             scale: checkScreenWidth(animations.scaleCode),
@@ -80,7 +80,7 @@ export default function Intro({ scroll }) {
       </motion.div>
 
       <motion.div
-        className={styles.info}
+        className={styles.intro__info}
         style={{
           y: checkScreenWidth(animations.moveText),
           opacity: checkScreenWidth(animations.opacityText),

@@ -25,14 +25,14 @@ export default function Projects({ scroll, tags, returnFilter }) {
 
   return (
     <motion.div
-      className={styles.intro}
+      className={styles.projects}
       style={{
         opacity: checkScreenWidth(animations.opacityIntro),
         y: checkScreenWidth(animations.moveIntro),
       }}
     >
-      <h3 className={styles.title}>Projects</h3>
-      <p className={styles.introduction}>
+      <h3 className={styles.projects__title}>Projects</h3>
+      <p className={styles.projects__intro}>
         For the past two years I have gained knowledge of three subjects. Each
         with a focus on real-life cases and projects. Not all projects are the
         best but I am proud of everything that I have accomplished. Moreover, I
@@ -40,10 +40,10 @@ export default function Projects({ scroll, tags, returnFilter }) {
         skills.
       </p>
 
-      <div className={styles.devine}>
+      <div className={styles.projects__tags}>
         {tags.map((tag) => (
           <motion.button
-            className={styles.filter__button}
+            className={styles.project__tags_filter}
             key={tag.sys.id}
             style={{
               scale: checkScreenWidth(animations.scaleBlocks),

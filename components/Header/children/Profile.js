@@ -11,28 +11,30 @@ export default function Profile({ scroll }) {
 
   return (
     <motion.div
-      className={styles.header}
+      className={styles.profile}
       style={{ opacity: checkScreenWidth(opacity) }}
     >
       <motion.h2
-        className={styles.greeting}
+        className={styles.profile__greeting}
         initial={{ y: "-10rem", opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 1, delay: 0.1 }}
       >
-      <div className={styles.profile}>
+        Nice to meet you
+      </motion.h2>
+      <div className={styles.profile__content}>
+
         <motion.div
-          className={styles.profile_info}
+          className={styles.profile__content_info}
           initial={{ x: "-15rem", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ ease: "easeInOut", duration: 1, delay: 1.25 }}
         >
-          <p className={styles.profile_intro}>My name is</p>
-          <h3 className={styles.profile_name}>Kaat Vermeire</h3>
+          <p className={styles.profile__content_intro}>My name is</p>
+          <h3 className={styles.profile__content_name}>Kaat Vermeire</h3>
         </motion.div>
-
         <motion.div
-          className={styles.profile_image}
+          className={styles.profile__image}
           initial={{ x: "-15rem", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ ease: "easeInOut", duration: 0.7, delay: 1.5 }}
@@ -41,8 +43,6 @@ export default function Profile({ scroll }) {
           <p className={styles.tagline}>est. 1998 - Eeklo (BE)</p>
         </motion.div>
       </div>
-        Nice to meet you
-      </motion.h2>
     </motion.div>
   );
 }
