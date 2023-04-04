@@ -8,7 +8,9 @@ import { useEffect, useState } from "react";
 const contentful = require("contentful");
 
 export default function Home({ result }) {
-  const projectsAr = result.items.filter((item) => item.fields.name === "Projects");
+  const projectsAr = result.items.filter(
+    (item) => item.fields.name === "Projects"
+  );
   const tagsAr = result.items.filter((item) => item.fields.name === "Tags");
 
   const projects = projectsAr[0].fields.items;
@@ -61,12 +63,10 @@ export default function Home({ result }) {
     <div>
       <Metadata title="@vermeirekaat" />
 
-      <Header tags={tags} handleFilter={(filter) => setFilter(filter)}/>
+      <Header tags={tags} handleFilter={(filter) => setFilter(filter)} />
 
       <div id="projects">
-        <Layout
-          projects={results}
-        />
+        <Layout projects={results} />
       </div>
 
       <Footer />
