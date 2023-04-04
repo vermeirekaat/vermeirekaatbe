@@ -20,8 +20,6 @@ export default function Profile({ scroll }) {
         animate={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 1, delay: 0.1 }}
       >
-        Nice to meet you
-      </motion.h2>
       <div className={styles.profile}>
         <motion.div
           className={styles.profile_info}
@@ -43,6 +41,8 @@ export default function Profile({ scroll }) {
           <p className={styles.tagline}>est. 1998 - Eeklo (BE)</p>
         </motion.div>
       </div>
+        Nice to meet you
+      </motion.h2>
     </motion.div>
   );
 }

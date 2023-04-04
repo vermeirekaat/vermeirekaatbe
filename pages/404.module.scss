@@ -11,30 +11,33 @@
 }
 
 .glitch {
-    font-family: sans-serif;
-	font-weight: bold;
-    text-align: center;
-	color: $primary-color;
-	font-size: 5rem;
-	animation: glitch 2s steps(100) infinite;
-
-    width: 70vw;
-    margin: 0 auto;
     position: relative; 
     top: 40vh;
     z-index: 2;
+
+    width: 70vw;
+    margin: 0 auto;
+
+    font-family: sans-serif;
+	font-size: 5rem;
+	font-weight: bold;
+    text-align: center;
+	color: $primary-color;
+
+	animation: glitch 2s steps(100) infinite;
 }
 
 .background {
-    background-image: url("/assets/heart-code.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    position: relative;
+    top: 20vh;
+
     width: 10rem; 
     height: 20rem;
     margin: 0 auto;
 
-    position: relative;
-    top: 20vh;
+    background-image: url('/assets/heart-code.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 @keyframes glitch {

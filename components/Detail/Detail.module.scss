@@ -1,11 +1,12 @@
 @import '/styles/variables';
 @import '/styles/fonts';
 
-.container {
-    min-height: 92vh; 
+.container { 
     margin: 2rem;
-    background-color: $dark;
     color: $white;
+    background-color: $dark;
+
+    min-height: 92vh;
 }
 
 .middle {
@@ -21,9 +22,10 @@
 }
 
 .header {
-    padding: 1rem;
-    max-width: 20rem;
     margin: 0 auto;
+    padding: 1rem;
+
+    max-width: 20rem;
 }
 
 .information {
@@ -40,37 +42,40 @@
 }
 
 .title {
-    font-family: Noto-Bold;
-    font-size: 1.5rem;
     margin: .5rem 0;
+    font-family: Noto-Bold, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
 }
 
 .tags {
-    width: 50vw;
     display: flex; 
     justify-content: space-between;
+    width: 50vw;
     text-transform: uppercase;
 }
 
 .content {
-    padding: 1rem;
-    max-width: 20rem;
     margin: 0 auto;
+    padding: 1rem;
+
+    max-width: 20rem;
 }
 
 .content_info {
-    font-family: Noto-Light;
+    font-family: Noto-Light, Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 150%;
 }
 
 .tools {
-    display: grid; 
+    display: grid;
+    grid-template-rows: auto; 
     grid-template-columns: repeat(2, 7rem);
-    grid-template-rows: auto;
-    font-family: Noto-Medium;
+
     width: 14rem;
     margin: 0 auto;
+
+    font-family: Noto-Medium, Arial, Helvetica, sans-serif;
 }
 
 .video {
@@ -94,6 +99,7 @@
 
     .information {
         margin: 1.5rem .5rem;
+
         max-width: 20rem;
     }
 
@@ -107,8 +113,9 @@
     }
 
     .content {
-        max-width: 40rem;
         padding: 1.5rem;
+
+        max-width: 40rem;
     }
 
     .tools {

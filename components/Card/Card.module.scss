@@ -7,33 +7,40 @@
     grid-template-columns: 100vw;
 }
 
-.image_container {
-    grid-column: 1;
-    grid-row: 1 / span 3;  
+.image_container {  
     position: relative; 
     top: 0; 
-    left: 0;
-    overflow: hidden; 
+    left: 0; 
+
     display: inline-block;
+
+    grid-row: 1 / span 3;
+    grid-column: 1;
+
+    overflow: hidden;
 }
 
 .image_overlay {
-    background-color: rgba(0, 0, 0, 0.45);
-    width: 100vw; 
-    height: 20rem;
     position: relative;
     top: 0; 
     left: 0;
     z-index: 1;
+
+    width: 100vw; 
+    height: 20rem;
+
+    background-color: rgb(0 0 0 / 45%);
 }
 
 .image_project {
-    width: 100vw;
-    height: 20rem;
-    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+
+    width: 100vw;
+    height: 20rem;
+
+    object-fit: cover;
 }
 
 .image_container img {
@@ -42,40 +49,46 @@
 }
 
 .project_container {
+    z-index: 2; 
+
+    margin: 2rem;
     grid-row: 1;
     grid-column: 1;
-    max-width: 15rem; 
-    margin: 2rem;
-    z-index: 2;
+
+    max-width: 15rem;
 }
 
 .project_description {
+    z-index: 2;
+
+    width: calc(100vw/1.5);
+    margin: 0 2rem;
     grid-row: 2;
     grid-column: 1;
-    z-index: 2;
-    width: calc(100vw/1.5);
-    font-family: Noto-Light;
+    align-self: flex-end;
+
+    font-family: $font-primary;
     font-size: 1rem;
     line-height: 1.5rem;
     color: $white;
-    margin: 0 2rem;
-    align-self: flex-end;
 }
 
 .subtitle {
     margin: 0;
-    font-family: Noto-Bold;
+    font-family: $font-bold;
     font-size: 1.5rem;
     color: $white;
 }
 
 .tags {
-    max-width: 10rem;
-    display: flex; 
-    font-family: Noto-Medium;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-between; 
+
+    font-family: $font-secondary;
     text-transform: uppercase;
     color: $white;
+
+    max-width: 10rem;
 }
 
 .tag {
@@ -87,15 +100,19 @@
     .image_container {
         width: calc(100vw/2);
     }
+
     .image_overlay {
         width: calc(100vw/2);
     }
+
     .image_project {
         width: calc(100vw/2);
     }
+
     .project_container {
         width: 10rem;
     }
+
     .project_description {
         width: 15rem;
     }
@@ -105,22 +122,28 @@
     .image_container {
         width: calc(100vw/4);
     }
+
     .image_overlay {
         width: calc(100vw/4);
     }
+
     .image_project {
         width: calc(100vw/4);
     }
+
     .project_container {
         width: 15rem;
     }
+
     .project_description {
         max-width: 20rem;
     }
+
     .project_container:hover + .image_container img {
         transform: scale(1.2);
     } 
+
     .project_container:hover + .image_container .image_overlay {
-        background-color: rgba(0, 0, 0, 0.75);
+        background-color: rgb(0 0 0 / 75%);
     }
 }

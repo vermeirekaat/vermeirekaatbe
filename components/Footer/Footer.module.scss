@@ -1,28 +1,30 @@
 @import '/styles/variables';
 
 .container {
-    background-color: $dark;
     width: 100vw;
     padding-top: 5rem;
+    background-color: $dark;
 }
 
 .footer {
-    max-width: 40rem; 
-    margin: 0 auto;
-    padding: .5rem;
     display: flex; 
     flex-direction: row; 
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
+
+    margin: 0 auto;
+    padding: .5rem;
+
+    max-width: 40rem;
 }
 
 .paragraph {
     color: white;
 }
 
-.socials {
-    width: 10rem; 
+.socials { 
     display: flex; 
     flex-direction: row; 
     justify-content: space-around;
+    width: 10rem;
 }
