@@ -10,7 +10,7 @@ export default function NotFound () {
     setTimeout(() => {
       router.push('/')
     }, 3500);
-  }, []);
+  }, [router]);
 
   return (
     <div className={styles.glitch_container}>

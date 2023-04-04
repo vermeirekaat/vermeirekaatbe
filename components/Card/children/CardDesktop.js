@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import styles from "../Card.module.scss";
 import Tag from "../../Tag/Tag";
@@ -32,10 +33,12 @@ export default function CardDesktop({ card }) {
       </div>
       <div className={styles.image_container}>
         <div className={styles.image_overlay}></div>
-        <img
+        <Image
           className={styles.image_project}
           src={"https:" + card.fields.cover.fields.file.url}
-        ></img>
+          alt={card.fields.cover.fields.name}
+          layout="fill"
+        />
       </div>
     </article>
   );
