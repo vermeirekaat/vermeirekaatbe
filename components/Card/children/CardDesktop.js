@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "../Card.module.scss";
 import Tag from "../../Tag/Tag";
@@ -30,6 +31,9 @@ export default function CardDesktop({ card }) {
             />
           ))}
         </motion.div>
+        <Link href={`/projects/${card.sys.id}`}>
+          <a className={styles.link}></a>
+        </Link>
       </div>
       <div className={styles.image_container}>
         <div className={styles.image_overlay}></div>

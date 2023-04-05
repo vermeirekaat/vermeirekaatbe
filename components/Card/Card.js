@@ -6,14 +6,21 @@ import CardDesktop from "./children/CardDesktop";
 
 export default function Card({ card, mobile }) {
   return (
-    <Link key={card.sys.id} href={`/projects/${card.sys.id}`}>
-      <a className={styles.link}>
-        {mobile === true ? (
-          <CardMobile card={card} />
-        ) : (
-          <CardDesktop card={card} />
-        )}
-      </a>
-    </Link>
+    <>
+    {mobile === true ? (
+      <CardMobile card={card} />
+    ) : (
+      <CardDesktop card={card} />
+    )}
+    </>
+    // <Link key={card.sys.id} href={`/projects/${card.sys.id}`}>
+    //   <a className={styles.link}>
+    //     {mobile === true ? (
+    //       <CardMobile card={card} />
+    //     ) : (
+    //       <CardDesktop card={card} />
+    //     )}
+    //   </a>
+    // </Link>
   );
 }
