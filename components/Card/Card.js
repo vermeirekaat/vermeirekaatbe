@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "./Card.module.scss";
 import Tag from "../Tag/Tag";
 
-export default function Card({ card, mobile }) {
+export default function Card({ card }) {
   return (
     <article className={styles.project} key={card.sys.id}>
       <div className={styles.project__container}>
