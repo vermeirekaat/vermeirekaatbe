@@ -34,8 +34,8 @@ export default function Profile() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ ease: "easeInOut", duration: 1, delay: 1.5 }}
           >
-            <div className={styles.image}></div>
-            <p className={styles.tagline}>est. 1998 - Eeklo (BE)</p>
+            <div className={styles.profile__bg}></div>
+            <p className={styles.profile__tagline}>est. 1998 - Eeklo (BE)</p>
           </motion.div>
         </div>
       </motion.div>
