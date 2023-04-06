@@ -6,17 +6,16 @@ import Intro from "./children/Intro";
 import Projects from "./children/Projects";
 
 export default function Header({ tags, handleFilter }) {
-  const { scrollYProgress } = useViewportScroll();
 
   return (
-    <section className={styles.container}>
-      <Profile scroll={scrollYProgress} />
-      <Intro scroll={scrollYProgress} />
-      <Projects
-        scroll={scrollYProgress}
+    <div>
+      <Profile/>
+      {/* <Intro /> */}
+      {/* <Projects
+        
         tags={tags}
         returnFilter={(e) => handleFilter(e)}
-      />
-    </section>
+      /> */}
+    </div>
   );
 }
