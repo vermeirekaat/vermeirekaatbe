@@ -44,7 +44,7 @@
     line-height: 1.5rem;
     color: $white;
     
-    @media screen and (min-width: $breakpoint-small) {
+    @media screen and (min-width: $breakpoint-medium) {
       opacity: 0;
       transform: translateY(2rem);
       transition: .3s ease-in-out;
