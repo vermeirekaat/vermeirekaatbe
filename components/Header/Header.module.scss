@@ -97,20 +97,30 @@
   }
 }
 
-.tagline {
+.tagscroll {
   width: 100vw;
+  background-color: $dark;
+  border-top: .5rem solid $primary-color;
+  border-bottom: .5rem solid $primary-color;
   overflow: hidden;
-  background-color: $white;
+  
+  &__container {
+    display: flex;
+    flex-direction: row;
 
-  span {
-    font-family: $font-bold;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: $primary-color;
+    span {
+      display: inline;
+  
+      padding: 5rem 2.5rem;
 
-    padding: 2rem 5rem;
-    display: inline-block;
+      font-family: $font-bold;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $primary-color;
+
+      white-space: nowrap;
+    }
   }
 }
 
