@@ -5,7 +5,6 @@ import Profile from "./children/Profile";
 import Intro from "./children/Intro";
 import Projects from "./children/Projects";
 import Tagline from "./children/TagLine";
-
 export default function Header({ tags, handleFilter }) {
 
   return (
