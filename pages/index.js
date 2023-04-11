@@ -63,7 +63,7 @@ export default function Home({ result }) {
     <div>
       <Metadata title="@vermeirekaat" />
 
-      <Header tags={tags} handleFilter={(filter) => setFilter(filter)} />
+      <Header/>
 
       <Footer />
     </div>
