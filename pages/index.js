@@ -1,7 +1,6 @@
 import Metadata from "../components/Metadata/Metadata";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import Layout from "../components/Layout/Layout";
 
 import { useEffect, useState } from "react";
 

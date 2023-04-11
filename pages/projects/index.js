@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Metadata from "../../components/Metadata/Metadata";
 import Layout from "../../components/Layout/Layout";
 import Filter from "../../components/Filter/Filter";
+import Footer from "../../components/Footer/Footer";
 
 const contentful = require("contentful");
 
@@ -63,7 +64,8 @@ export default function Projects({ result }) {
     <>
       <Metadata title="@vermeirekaat | Projects" />
       <Filter tags={tags} handleFilter={(filter) => setFilter(filter)} />
-      <Layout projects={results} />;
+      <Layout projects={results} />
+      <Footer/>
     </>
   );
 }
