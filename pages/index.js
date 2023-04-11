@@ -65,10 +65,6 @@ export default function Home({ result }) {
 
       <Header tags={tags} handleFilter={(filter) => setFilter(filter)} />
 
-      <div id="projects">
-        <Layout projects={results} />
-      </div>
-
       <Footer />
     </div>
   );
