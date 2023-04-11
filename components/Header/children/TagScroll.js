@@ -10,7 +10,7 @@ export default function TagScroll({ input }) {
 
   const [displayAmount, setDisplayAmount] = useState(1);
 
-  const posX = useTransform(scrollYProgress, [0, 1], [-1200, 600]);
+  const posX = useTransform(scrollYProgress, [0, 1], [100, -250]);
 
   useEffect(() => {
     calculateWidth();
